@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="210,90">
+    <HorizontalLayout width="210" padding="2,12,2,2">
+                    <Control width="15" />
+                    <Button name="LOGO" tooltip=" DirectX酱." bordersize="2" width="64" height="64" bkcolor="#FF000000" bordercolor="#00DBEFFD" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;Common\LOGO.png&apos;" hotimage="file=&apos;Common\LOGO.png&apos;" pushedimage="file=&apos;Common\LOGO.png&apos;" />
+                    <VerticalLayout>
+                        <Text text="{c #386382} DirectX酱.{/c}" bordercolor="#00DBEFFD" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                        <Text text="{c #386382} Lv.24{n}{/c}" bordercolor="#00DBEFFD" maxheight="26" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                        <Text text="{c #E4007F} VIP 7{/c}" bordercolor="#00DBEFFD" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                    </VerticalLayout>
+                </HorizontalLayout>
+</Window>

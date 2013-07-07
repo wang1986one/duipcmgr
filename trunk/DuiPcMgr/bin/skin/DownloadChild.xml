@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="990,446">
+    <VerticalLayout bordercolor="#FF0000FF">
+        <HorizontalLayout height="33" bordercolor="#FF0000FF">
+            <Option name="AllTasks" text="所有任务" width="85" height="33" textcolor="#FF386382" disabledtextcolor="#FFA7A6AA" font="1" align="center" normalimage="file=&apos;Common\TabLayoutbtn.png&apos;" hotimage="file=&apos;Common\TabLayoutbtn_h.png&apos;" pushedimage="file=&apos;Common\TabLayoutbtn_p.png&apos;" group="下载标签页" selectedimage="file=&apos;Common\TabLayoutbtn_p.png&apos;" />
+            <Option name="IsDown" text="正在下载" width="85" height="33" textcolor="#FF386382" disabledtextcolor="#FFA7A6AA" font="1" align="center" normalimage="file=&apos;Common\TabLayoutbtn.png&apos;" hotimage="file=&apos;Common\TabLayoutbtn_h.png&apos;" pushedimage="file=&apos;Common\TabLayoutbtn_p.png&apos;" group="下载标签页" selected="true" selectedimage="file=&apos;Common\TabLayoutbtn_p.png&apos;" />
+            <Option name="Complete" text="已完成" width="85" height="33" textcolor="#FF386382" disabledtextcolor="#FFA7A6AA" font="1" align="center" normalimage="file=&apos;Common\TabLayoutbtn.png&apos;" hotimage="file=&apos;Common\TabLayoutbtn_h.png&apos;" pushedimage="file=&apos;Common\TabLayoutbtn_p.png&apos;" group="下载标签页" selectedimage="file=&apos;Common\TabLayoutbtn_p.png&apos;" />
+            <Option name="Recycle" text="垃圾箱" width="85" height="33" textcolor="#FF386382" disabledtextcolor="#FFA7A6AA" font="1" align="center" normalimage="file=&apos;Common\TabLayoutbtn.png&apos;" hotimage="file=&apos;Common\TabLayoutbtn_h.png&apos;" pushedimage="file=&apos;Common\TabLayoutbtn_p.png&apos;" group="下载标签页" selectedimage="file=&apos;Common\TabLayoutbtn_p.png&apos;" />
+            <HorizontalLayout bkimage="file=&apos;Common\TabLayoutbtn.png&apos; source=&apos;0,0,85,22&apos; corner=&apos;2,2,82,2&apos;" bordercolor="#FF0000FF">
+                <Button name="btn_Keep" text="Keep" width="33" height="33" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;Common\TabLayoutbtn.png&apos; corner=&apos;2,2,2,2&apos;" hotimage="file=&apos;Common\TabLayoutbtn_h.png&apos;" pushedimage="file=&apos;Common\TabLayoutbtn_p.png&apos;" />
+                <Button name="btn_Keep1" text="Keep" width="33" height="33" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;Common\TabLayoutbtn.png&apos; corner=&apos;2,2,2,2&apos;" hotimage="file=&apos;Common\TabLayoutbtn_h.png&apos;" pushedimage="file=&apos;Common\TabLayoutbtn_p.png&apos;" />
+                <Button name="btn_Keep2" text="Keep" width="33" height="33" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;Common\TabLayoutbtn.png&apos; corner=&apos;2,2,2,2&apos;" hotimage="file=&apos;Common\TabLayoutbtn_h.png&apos;" pushedimage="file=&apos;Common\TabLayoutbtn_p.png&apos;" />
+                <Button name="btn_Keep3" text="Keep" width="33" height="33" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;Common\TabLayoutbtn.png&apos; corner=&apos;2,2,2,2&apos;" hotimage="file=&apos;Common\TabLayoutbtn_h.png&apos;" pushedimage="file=&apos;Common\TabLayoutbtn_p.png&apos;" />
+            </HorizontalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout bordercolor="#FF00FF00">
+            <TabLayout name="TabDownloadLayout" selectedid="1">
+                <HorizontalLayout>
+                    <List name="AllTaskslist" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" menu="true" itemtextcolor="#FF000000" itembkcolor="#FFE2DDDF" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" headerbkimage="file=&apos;Common\list_header_bg.png&apos;" itemshowhtml="true" vscrollbar="true" hscrollbar="true">
+                        <ListHeader height="24" bkimage="file=&apos;Common\list_header_bg.png&apos;" menu="true">
+                            <ListHeaderItem text="任务名称" width="160" maxwidth="280" minwidth="30" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="分段" width="50" maxwidth="80" minwidth="30" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="下载进度" width="130" maxwidth="180" minwidth="30" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="下载速度" width="60" maxwidth="100" minwidth="30" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="剩余时间" width="130" maxwidth="180" minwidth="30" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="已用时间" width="80" maxwidth="100" minwidth="30" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="状态" width="60" maxwidth="90" minwidth="30" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="源地址" maxwidth="800" minwidth="70" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                        </ListHeader>
+                    </List>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <List name="IsDownlist" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" menu="true" itemtextcolor="#FF000000" itembkcolor="#FFE2DDDF" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" headerbkimage="file=&apos;Common\list_header_bg.png&apos;" itemshowhtml="true" vscrollbar="true" hscrollbar="true">
+                        <ListHeader height="24" bkimage="file=&apos;Common\list_header_bg.png&apos;" menu="true">
+                            <ListHeaderItem text="任务名称" width="160" maxwidth="280" minwidth="30" textcolor="#FF000000" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="分段" width="50" maxwidth="80" minwidth="30" textcolor="#FF000000" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="下载进度" width="130" maxwidth="180" minwidth="30" textcolor="#FF000000" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="下载速度" width="60" maxwidth="100" minwidth="30" textcolor="#FF000000" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="剩余时间" width="130" maxwidth="180" minwidth="30" textcolor="#FF000000" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="已用时间" width="80" maxwidth="100" minwidth="30" textcolor="#FF000000" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="状态" width="60" maxwidth="90" minwidth="30" textcolor="#FF000000" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="源地址" maxwidth="800" minwidth="70" textcolor="#FF000000" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                        </ListHeader>
+                    </List>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <List name="Completelist" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" menu="true" itemtextcolor="#FF000000" itembkcolor="#FFE2DDDF" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" headerbkimage="file=&apos;Common\list_header_bg.png&apos;" itemshowhtml="true" vscrollbar="true" hscrollbar="true">
+                        <ListHeader height="24" bkimage="file=&apos;Common\list_header_bg.png&apos;" menu="true">
+                            <ListHeaderItem text="任务名称" width="160" maxwidth="280" minwidth="30" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="分段" width="50" maxwidth="80" minwidth="30" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="状态" width="60" maxwidth="90" minwidth="30" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="源地址" maxwidth="800" minwidth="70" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                        </ListHeader>
+                    </List>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <List name="Recyclelist" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" menu="true" itemtextcolor="#FF000000" itembkcolor="#FFE2DDDF" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" headerbkimage="file=&apos;Common\list_header_bg.png&apos;" itemshowhtml="true" vscrollbar="true" hscrollbar="true">
+                        <ListHeader height="24" bkimage="file=&apos;Common\list_header_bg.png&apos;" menu="true">
+                            <ListHeaderItem text="任务名称" width="160" maxwidth="280" minwidth="30" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="分段" width="50" maxwidth="80" minwidth="30" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="状态" width="60" maxwidth="90" minwidth="30" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                            <ListHeaderItem text="源地址" maxwidth="800" minwidth="70" sepwidth="1" align="center" hotimage="file=&apos;Common\list_header_hot.png&apos;" pushedimage="file=&apos;Common\list_header_pushed.png&apos;" sepimage="file=&apos;Common\list_header_sep.png&apos;" />
+                        </ListHeader>
+                    </List>
+                </HorizontalLayout>
+            </TabLayout>
+            <VerticalLayout width="8" bkcolor="#FFFFFFFF">
+                <Control height="24" bkimage="Common\list_header_bg.png" />
+                <Control />
+                <Option name="ToggleSidebar" tooltip="显示/隐藏边栏" width="8" height="293" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;&apos;" hotimage="file=&apos;Common\aio_flexleft_normal.png&apos;" pushedimage="file=&apos;&apos;" selectedimage="file=&apos;Common\aio_flexright_normal.png&apos;" />
+                <Control />
+            </VerticalLayout>
+            <VerticalLayout name="SidebarLayout" bordersize="1" width="180" padding="0,0,2,0" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" maxwidth="225" minwidth="170">
+                <Text text="{c #386382}{n}{n}  详细信息描述预留 {/c}" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                <Text text="{c #386382}  所有任务:[282] {/c}" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                <Text text="{c #386382}  当前任务:[16] {/c}" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                <Text text="{c #386382}  预计时长:[1:25:07] {/c}" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                <Text text="{c #386382}  当前速度:[2.4 MB/s] {/c}" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                <Text text="{c #386382}  已完成:[256] {/c}" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                <Text text="{c #386382}  垃圾箱:[16] {/c}" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+            </VerticalLayout>
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>
