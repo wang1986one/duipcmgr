@@ -430,6 +430,14 @@
 					RelativePath=".\Utils\Hash\crc32.c"
 					>
 					<FileConfiguration
+						Name="UnicodeDebug|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"
+						/>
+					</FileConfiguration>
+					<FileConfiguration
 						Name="UnicodeRelease|Win32"
 						>
 						<Tool
