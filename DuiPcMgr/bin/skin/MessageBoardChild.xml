@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="990,446">
+    <HorizontalLayout>
+        <ActiveX name="留言板IE" clsid="{8856F961-340A-11D0-A96B-00C04FD705A2}" delaycreate="false" />
+    </HorizontalLayout>
+</Window>
