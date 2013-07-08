@@ -8,6 +8,10 @@
 using namespace ZThread;
 
 CMainWnd::CMainWnd(void)
+: m_btnClose(NULL)
+, m_btnMin(NULL)
+, m_btnMax(NULL)
+, m_btnRestore(NULL)
 {
 }
 
@@ -138,22 +142,28 @@ LRESULT CMainWnd::OnSize( UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandle
 	{
 	case SIZE_MAXIMIZED:		// Win7拖动标题栏也能全屏，处理Size消息才能正确控制状态
 		{
-			m_btnMax->SetVisible(false);
-			m_btnRestore->SetVisible(true);
+			if ( m_btnMax)
+				m_btnMax->SetVisible(false);
+			if ( m_btnRestore)
+				m_btnRestore->SetVisible(true);
 		}
 		break;
 	case SIZE_RESTORED:
 		{
 			if ( ::IsMinimized(m_hWnd) ==FALSE )	// 非最小化模式恢复
 			{
-				m_btnMax->SetVisible(true);
-				m_btnRestore->SetVisible(false);
+				if ( m_btnMax)
+					m_btnMax->SetVisible(true);
+				if ( m_btnRestore)
+					m_btnRestore->SetVisible(false);
 			}
 
 			if ( ::IsMaximized(m_hWnd) == TRUE )	// 最大化模式恢复
 			{
-				m_btnMax->SetVisible(true);
-				m_btnRestore->SetVisible(false);
+				if ( m_btnMax)
+					m_btnMax->SetVisible(true);
+				if ( m_btnRestore)
+					m_btnRestore->SetVisible(false);
 			}
 		}
 		break;
