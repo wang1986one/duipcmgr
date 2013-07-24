@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="990,446">
+  <VerticalLayout bordercolor="#FF0000FF">
+    <HorizontalLayout bordercolor="#FF00FF00">
+      <VerticalLayout name="SidebarLayout" bordersize="1" width="220" padding="0,0,0,0" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" bkimage="Common\空地君临时背景.png" >
+        <Text text="{c #386382}{n}  空地君 {/c}" textpadding="60,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+      </VerticalLayout>
+      <VerticalLayout>
+        <HorizontalLayout height="37" bkimage="file='Common\XX01.png'"  >
+          <Text text="{c #386382} 您共安装了{/c}" textcolor="#FF000000" padding="5,8,0,0" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+          <Text text="1024" font="3" textcolor="#FF017D46" padding="0,7,0,0" disabledtextcolor="#FFA7A6AA" showhtml="false" align="wrap" />
+          <Text text="{c #386382}款软件.{/c}"    textcolor="#FF000000" padding="0,8,0,0" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+          <Control />
+          <Button name="refresh" width="25" height="25" padding="0,5,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='Common\reload.png'" hotimage="file='Common\reload_h.png'" pushedimage="file='Common\reload_p.png'" />
+        </HorizontalLayout>
+        <HorizontalLayout>
+          <List name="AllTaskslist" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" menu="true" itemtextcolor="#FF000000" itembkcolor="#FFE2DDDF" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" headerbkimage="file='Common\list_header_bg.png'" itemshowhtml="true" vscrollbar="true" hscrollbar="true">
+            <ListHeader height="24" bkimage="file='Common\list_header_bg.png'" menu="true">
+              <ListHeaderItem text="软件名称"   width="260"     minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
+              <ListHeaderItem text="大小"       width="90"      minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
+              <ListHeaderItem text="安装日期"   width="130"     minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
+              <ListHeaderItem text="使用频率"   width="140"     minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
+              <ListHeaderItem text="操作"       width="130"     minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
+            </ListHeader>
+          </List>
+        </HorizontalLayout>
+      </VerticalLayout>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>
