@@ -1,0 +1,97 @@
+﻿生成启动时间为 2013/6/9 0:30:39。
+     1>项目“G:\visual studio 2010\Projects\LifeHelperV\framwork\thirdparty\log4cplus-1.0.4\msvc8\log4cplus_static.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“.\Win32\log4cplus_static.Debug\log4cplus_static.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         D:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\include /Zi /nologo /W3 /WX- /Od /Oy- /D _DEBUG /D _USRDLL /D WIN32 /D _LIB /D _WINDOWS /D LOG4CPLUS_STATIC /D INSIDE_LOG4CPLUS /D _SCL_SECURE_NO_DEPRECATE /D _CRT_SECURE_NO_DEPRECATE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\.\Win32\log4cplus_static.Debug\\" /Fd".\.\Win32\log4cplus_static.Debug\vc100.pdb" /FR".\Win32\log4cplus_static.Debug\\" /Gd /TP /analyze- /errorReport:prompt ..\src\appender.cxx ..\src\appenderattachableimpl.cxx ..\src\configurator.cxx ..\src\factory.cxx ..\src\filter.cxx "..\src\global-init.cxx" ..\src\hierarchy.cxx ..\src\hierarchylocker.cxx ..\src\layout.cxx ..\src\logger.cxx ..\src\loggerimpl.cxx ..\src\loggingevent.cxx ..\src\loglevel.cxx ..\src\loglog.cxx ..\src\logloguser.cxx ..\src\ndc.cxx ..\src\objectregistry.cxx ..\src\patternlayout.cxx ..\src\pointer.cxx ..\src\property.cxx ..\src\rootlogger.cxx ..\src\sleep.cxx "..\src\socket-win32.cxx" ..\src\socket.cxx ..\src\socketbuffer.cxx ..\src\stringhelper.cxx ..\src\syncprims.cxx ..\src\threads.cxx ..\src\timehelper.cxx ..\src\version.cxx ..\src\consoleappender.cxx ..\src\fileappender.cxx ..\src\nteventlogappender.cxx ..\src\nullappender.cxx ..\src\socketappender.cxx ..\src\win32consoleappender.cxx ..\src\win32debugappender.cxx
+         win32debugappender.cxx
+         win32consoleappender.cxx
+         socketappender.cxx
+         nullappender.cxx
+         nteventlogappender.cxx
+         fileappender.cxx
+         consoleappender.cxx
+         version.cxx
+         timehelper.cxx
+         threads.cxx
+         syncprims.cxx
+         stringhelper.cxx
+         socketbuffer.cxx
+         socket.cxx
+         socket-win32.cxx
+         sleep.cxx
+         rootlogger.cxx
+         property.cxx
+         pointer.cxx
+         patternlayout.cxx
+         正在生成代码...
+         正在编译...
+         objectregistry.cxx
+         ndc.cxx
+         logloguser.cxx
+         loglog.cxx
+         loglevel.cxx
+         loggingevent.cxx
+         loggerimpl.cxx
+         logger.cxx
+         layout.cxx
+         hierarchylocker.cxx
+         hierarchy.cxx
+         global-init.cxx
+         filter.cxx
+         factory.cxx
+         configurator.cxx
+         appenderattachableimpl.cxx
+         appender.cxx
+         正在生成代码...
+     1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1151,5): warning MSB8012: TargetPath(G:\visual studio 2010\Projects\LifeHelperV\framwork\thirdparty\log4cplus-1.0.4\msvc8\.\Win32\log4cplus_static.Debug\log4cplus_static.lib) 与 Library 的 OutputFile 属性值(G:\visual studio 2010\Projects\LifeHelperV\framwork\thirdparty\log4cplus-1.0.4\msvc8\Win32\log4cplus_static.Debug\log4cplusSD.lib)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Lib.OutputFile) 中指定的值匹配。
+     1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1153,5): warning MSB8012: TargetName(log4cplus_static) 与 Library 的 OutputFile 属性值(log4cplusSD)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Lib.OutputFile) 中指定的值匹配。
+       Lib:
+         D:\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:".\Win32\log4cplus_static.Debug\log4cplusSD.lib" ws2_32.lib /NOLOGO .\.\Win32\log4cplus_static.Debug\appender.obj
+         .\.\Win32\log4cplus_static.Debug\appenderattachableimpl.obj
+         .\.\Win32\log4cplus_static.Debug\configurator.obj
+         .\.\Win32\log4cplus_static.Debug\factory.obj
+         .\.\Win32\log4cplus_static.Debug\filter.obj
+         ".\.\Win32\log4cplus_static.Debug\global-init.obj"
+         .\.\Win32\log4cplus_static.Debug\hierarchy.obj
+         .\.\Win32\log4cplus_static.Debug\hierarchylocker.obj
+         .\.\Win32\log4cplus_static.Debug\layout.obj
+         .\.\Win32\log4cplus_static.Debug\logger.obj
+         .\.\Win32\log4cplus_static.Debug\loggerimpl.obj
+         .\.\Win32\log4cplus_static.Debug\loggingevent.obj
+         .\.\Win32\log4cplus_static.Debug\loglevel.obj
+         .\.\Win32\log4cplus_static.Debug\loglog.obj
+         .\.\Win32\log4cplus_static.Debug\logloguser.obj
+         .\.\Win32\log4cplus_static.Debug\ndc.obj
+         .\.\Win32\log4cplus_static.Debug\objectregistry.obj
+         .\.\Win32\log4cplus_static.Debug\patternlayout.obj
+         .\.\Win32\log4cplus_static.Debug\pointer.obj
+         .\.\Win32\log4cplus_static.Debug\property.obj
+         .\.\Win32\log4cplus_static.Debug\rootlogger.obj
+         .\.\Win32\log4cplus_static.Debug\sleep.obj
+         ".\.\Win32\log4cplus_static.Debug\socket-win32.obj"
+         .\.\Win32\log4cplus_static.Debug\socket.obj
+         .\.\Win32\log4cplus_static.Debug\socketbuffer.obj
+         .\.\Win32\log4cplus_static.Debug\stringhelper.obj
+         .\.\Win32\log4cplus_static.Debug\syncprims.obj
+         .\.\Win32\log4cplus_static.Debug\threads.obj
+         .\.\Win32\log4cplus_static.Debug\timehelper.obj
+         .\.\Win32\log4cplus_static.Debug\version.obj
+         .\.\Win32\log4cplus_static.Debug\consoleappender.obj
+         .\.\Win32\log4cplus_static.Debug\fileappender.obj
+         .\.\Win32\log4cplus_static.Debug\nteventlogappender.obj
+         .\.\Win32\log4cplus_static.Debug\nullappender.obj
+         .\.\Win32\log4cplus_static.Debug\socketappender.obj
+         .\.\Win32\log4cplus_static.Debug\win32consoleappender.obj
+         .\.\Win32\log4cplus_static.Debug\win32debugappender.obj
+         log4cplus_static.vcxproj -> G:\visual studio 2010\Projects\LifeHelperV\framwork\thirdparty\log4cplus-1.0.4\msvc8\.\Win32\log4cplus_static.Debug\log4cplus_static.lib
+       BscMake:
+         D:\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o".\.\Win32\log4cplus_static.Debug\log4cplus_static.bsc" .\Win32\log4cplus_static.Debug\appender.sbr .\Win32\log4cplus_static.Debug\appenderattachableimpl.sbr .\Win32\log4cplus_static.Debug\configurator.sbr .\Win32\log4cplus_static.Debug\factory.sbr .\Win32\log4cplus_static.Debug\filter.sbr ".\Win32\log4cplus_static.Debug\global-init.sbr" .\Win32\log4cplus_static.Debug\hierarchy.sbr .\Win32\log4cplus_static.Debug\hierarchylocker.sbr .\Win32\log4cplus_static.Debug\layout.sbr .\Win32\log4cplus_static.Debug\logger.sbr .\Win32\log4cplus_static.Debug\loggerimpl.sbr .\Win32\log4cplus_static.Debug\loggingevent.sbr .\Win32\log4cplus_static.Debug\loglevel.sbr .\Win32\log4cplus_static.Debug\loglog.sbr .\Win32\log4cplus_static.Debug\logloguser.sbr .\Win32\log4cplus_static.Debug\ndc.sbr .\Win32\log4cplus_static.Debug\objectregistry.sbr .\Win32\log4cplus_static.Debug\patternlayout.sbr .\Win32\log4cplus_static.Debug\pointer.sbr .\Win32\log4cplus_static.Debug\property.sbr .\Win32\log4cplus_static.Debug\rootlogger.sbr .\Win32\log4cplus_static.Debug\sleep.sbr ".\Win32\log4cplus_static.Debug\socket-win32.sbr" .\Win32\log4cplus_static.Debug\socket.sbr .\Win32\log4cplus_static.Debug\socketbuffer.sbr .\Win32\log4cplus_static.Debug\stringhelper.sbr .\Win32\log4cplus_static.Debug\syncprims.sbr .\Win32\log4cplus_static.Debug\threads.sbr .\Win32\log4cplus_static.Debug\timehelper.sbr .\Win32\log4cplus_static.Debug\version.sbr .\Win32\log4cplus_static.Debug\consoleappender.sbr .\Win32\log4cplus_static.Debug\fileappender.sbr .\Win32\log4cplus_static.Debug\nteventlogappender.sbr .\Win32\log4cplus_static.Debug\nullappender.sbr .\Win32\log4cplus_static.Debug\socketappender.sbr .\Win32\log4cplus_static.Debug\win32consoleappender.sbr .\Win32\log4cplus_static.Debug\win32debugappender.sbr
+       FinalizeBuildStatus:
+         正在删除文件“.\Win32\log4cplus_static.Debug\log4cplus_static.unsuccessfulbuild”。
+         正在对“.\Win32\log4cplus_static.Debug\log4cplus_static.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“G:\visual studio 2010\Projects\LifeHelperV\framwork\thirdparty\log4cplus-1.0.4\msvc8\log4cplus_static.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:01:07.06

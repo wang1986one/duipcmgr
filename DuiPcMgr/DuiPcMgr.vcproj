@@ -43,9 +43,9 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="."
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_CRT_RAND_S"
-				MinimalRebuild="false"
+				AdditionalIncludeDirectories="&quot;F:\C++ÐÞÁ¶\Open Source Code\duipcmgr\trunk\DuiPcMgr\LOG4CPLUS\log4cplus-1.0.4\include\&quot;;."
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_CRT_RAND_S;LOG4CPLUS_STATIC"
+				MinimalRebuild="true"
 				ExceptionHandling="2"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
@@ -180,6 +180,10 @@
 		</Configuration>
 	</Configurations>
 	<References>
+		<ProjectReference
+			ReferencedProjectIdentifier="{BEC0CD2F-60CD-40E2-A89B-AB10E902F1D5}"
+			RelativePathToProject=".\LOG4CPLUS\log4cplus-1.0.4\msvc8\log4cplus_static.vcproj"
+		/>
 	</References>
 	<Files>
 		<Filter
@@ -696,6 +700,10 @@
 			Name="Core"
 			>
 		</Filter>
+		<File
+			RelativePath=".\log.h"
+			>
+		</File>
 		<File
 			RelativePath=".\main.cpp"
 			>
