@@ -1,0 +1,8 @@
+07/27/13 23:53:50| 1,464|DuiPcMgr_WinMain                |TRACE|   16|ENTER: WinMain
+07/27/13 23:53:52| 1,464|DuiPcMgr_WinMain                |TRACE|   16|EXIT:  WinMain
+07/27/13 23:57:21| 2,744|DuiPcMgr_WinMain                |TRACE|   17|ENTER: WinMain
+07/27/13 23:57:21| 2,744|DuiPcMgr_WinMain                |INFO |   18|日志初始化成功......
+07/27/13 23:57:21| 2,744|DuiPcMgr_WinMain                |INFO |   20|试试<<的作用1:1,024
+07/27/13 23:57:21| 2,744|DuiPcMgr_WinMain                |INFO |   23|试试<<的作用2:shaoyuan
+07/27/13 23:57:21| 2,744|DuiPcMgr_WinMain                |INFO |   24|试试<<的作用3:少原
+07/27/13 23:57:22| 2,744|DuiPcMgr_WinMain                |TRACE|   17|EXIT:  WinMain
