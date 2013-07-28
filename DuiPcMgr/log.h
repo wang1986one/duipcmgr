@@ -1,7 +1,7 @@
 /** @file
-    本文件内定义简化日志记录的宏.
-    所有宏的展开均与LOG4CPLUS一样，使用同样的定义开关，只是对Logger的获取及
-    所获得的Logger变量的使用做了自动化处理。
+	本文件内定义简化日志记录的宏.
+	所有宏的展开均与LOG4CPLUS一样，使用同样的定义开关，只是对Logger的获取及
+	所获得的Logger变量的使用做了自动化处理。
 	this file is edit by shaoyuan
 	note:shaoyuan1943@gmail.com
 */
@@ -34,10 +34,10 @@ using namespace log4cplus::helpers;
 #define LOG4CPLUS_DISABLE_TRACE
 #endif
 /**
-    @def DECLARE_SUBLOGITEM(SubLogItemName)  声明某模块日志类实例.
+	@def DECLARE_SUBLOGITEM(SubLogItemName)  声明某模块日志类实例.
 
-    该宏首先声明一个专有的命名空间，在在此命名空间创建一个该模块的Logger类实例，
-    并自动使用该命名空间。该宏与其它的LOG_×××宏配合使用，以简化记录日志的操作.
+	该宏首先声明一个专有的命名空间，在在此命名空间创建一个该模块的Logger类实例，
+	并自动使用该命名空间。该宏与其它的LOG_×××宏配合使用，以简化记录日志的操作.
 */
 
 #ifndef LOG4CPLUS_DISABLE_FATAL
@@ -68,26 +68,26 @@ using namespace log4cplus::helpers;
 #endif
 
 /**
-    @def LOG_TRACE_METHOD(logEvent)  创建一个TraceLogger
+	@def LOG_TRACE_METHOD(logEvent)  创建一个TraceLogger
 	__FUNCTION__:const char[]
  */
 #if !defined(LOG4CPLUS_DISABLE_TRACE)
 #define LOG_TRACE_METHOD() \
-    log4cplus::TraceLogger _log4cplus_trace_logger(_rolly_logger, helpers::towstring(__FUNCTION__), __FILE__, __LINE__)
+	log4cplus::TraceLogger _log4cplus_trace_logger(_rolly_logger, helpers::towstring(__FUNCTION__), __FILE__, __LINE__)
 #define LOG_TRACE(logEvent) \
-    do { \
-        if(_rolly_logger.isEnabledFor(log4cplus::TRACE_LOG_LEVEL)) { \
-            log4cplus::tostringstream _log4cplus_buf; \
-            _log4cplus_buf << logEvent; \
-            _rolly_logger.forcedLog(log4cplus::TRACE_LOG_LEVEL, _log4cplus_buf.str(), __FILE__, __LINE__); \
-        } \
-    } while(0)
+	do { \
+		if(_rolly_logger.isEnabledFor(log4cplus::TRACE_LOG_LEVEL)) { \
+			log4cplus::tostringstream _log4cplus_buf; \
+			_log4cplus_buf << logEvent; \
+			_rolly_logger.forcedLog(log4cplus::TRACE_LOG_LEVEL, _log4cplus_buf.str(), __FILE__, __LINE__); \
+		} \
+	} while(0)
 #define LOG_TRACE_STR(logEvent) \
-    do { \
-        if(_rolly_logger.isEnabledFor(log4cplus::TRACE_LOG_LEVEL)) { \
-            _rolly_logger.forcedLog(log4cplus::TRACE_LOG_LEVEL, logEvent, __FILE__, __LINE__); \
-        } \
-    } while(0)
+	do { \
+		if(_rolly_logger.isEnabledFor(log4cplus::TRACE_LOG_LEVEL)) { \
+			_rolly_logger.forcedLog(log4cplus::TRACE_LOG_LEVEL, logEvent, __FILE__, __LINE__); \
+		} \
+	} while(0)
 #else
 #define LOG_TRACE_METHOD()
 #define LOG_TRACE(logEvent)
@@ -99,19 +99,19 @@ using namespace log4cplus::helpers;
  */
 #if !defined(LOG4CPLUS_DISABLE_DEBUG)
 #define LOG_DEBUG(logEvent) \
-    do { \
-        if(_rolly_logger.isEnabledFor(log4cplus::DEBUG_LOG_LEVEL)) { \
-            log4cplus::tostringstream _log4cplus_buf; \
-            _log4cplus_buf << logEvent; \
-            _rolly_logger.forcedLog(log4cplus::DEBUG_LOG_LEVEL, _log4cplus_buf.str(), __FILE__, __LINE__); \
-        } \
-    } while(0)
+	do { \
+		if(_rolly_logger.isEnabledFor(log4cplus::DEBUG_LOG_LEVEL)) { \
+			log4cplus::tostringstream _log4cplus_buf; \
+			_log4cplus_buf << logEvent; \
+			_rolly_logger.forcedLog(log4cplus::DEBUG_LOG_LEVEL, _log4cplus_buf.str(), __FILE__, __LINE__); \
+		} \
+	} while(0)
 #define LOG_DEBUG_STR(logEvent) \
-    do { \
-        if(_rolly_logger.isEnabledFor(log4cplus::DEBUG_LOG_LEVEL)) { \
-            _rolly_logger.forcedLog(log4cplus::DEBUG_LOG_LEVEL, logEvent, __FILE__, __LINE__); \
-        } \
-    } while(0)
+	do { \
+		if(_rolly_logger.isEnabledFor(log4cplus::DEBUG_LOG_LEVEL)) { \
+			_rolly_logger.forcedLog(log4cplus::DEBUG_LOG_LEVEL, logEvent, __FILE__, __LINE__); \
+		} \
+	} while(0)
 #else
 #define LOG_DEBUG(logEvent)
 #define LOG_DEBUG_STR(logEvent)
@@ -122,19 +122,19 @@ using namespace log4cplus::helpers;
  */
 #if !defined(LOG4CPLUS_DISABLE_INFO)
 #define LOG_INFO(logEvent) \
-    do { \
-        if(_rolly_logger.isEnabledFor(log4cplus::INFO_LOG_LEVEL)) { \
-            log4cplus::tostringstream _log4cplus_buf; \
-            _log4cplus_buf << logEvent; \
-            _rolly_logger.forcedLog(log4cplus::INFO_LOG_LEVEL, _log4cplus_buf.str(), __FILE__, __LINE__); \
-        } \
-    } while(0)
+	do { \
+		if(_rolly_logger.isEnabledFor(log4cplus::INFO_LOG_LEVEL)) { \
+			log4cplus::tostringstream _log4cplus_buf; \
+			_log4cplus_buf << logEvent; \
+			_rolly_logger.forcedLog(log4cplus::INFO_LOG_LEVEL, _log4cplus_buf.str(), __FILE__, __LINE__); \
+		} \
+	} while(0)
 #define LOG_INFO_STR(logEvent) \
-    do { \
-        if(_rolly_logger.isEnabledFor(log4cplus::INFO_LOG_LEVEL)) { \
-            _rolly_logger.forcedLog(log4cplus::INFO_LOG_LEVEL, logEvent, __FILE__, __LINE__); \
-        } \
-    } while(0)
+	do { \
+		if(_rolly_logger.isEnabledFor(log4cplus::INFO_LOG_LEVEL)) { \
+			_rolly_logger.forcedLog(log4cplus::INFO_LOG_LEVEL, logEvent, __FILE__, __LINE__); \
+		} \
+	} while(0)
 #else
 #define LOG_INFO(logEvent)
 #define LOG_INFO_STR(logEvent)
@@ -145,19 +145,19 @@ using namespace log4cplus::helpers;
  */
 #if !defined(LOG4CPLUS_DISABLE_WARN)
 #define LOG_WARN(logEvent) \
-    do { \
-        if(_rolly_logger.isEnabledFor(log4cplus::WARN_LOG_LEVEL)) { \
-            log4cplus::tostringstream _log4cplus_buf; \
-            _log4cplus_buf << logEvent; \
-            _rolly_logger.forcedLog(log4cplus::WARN_LOG_LEVEL, _log4cplus_buf.str(), __FILE__, __LINE__); \
-        } \
-    } while(0)
+	do { \
+		if(_rolly_logger.isEnabledFor(log4cplus::WARN_LOG_LEVEL)) { \
+			log4cplus::tostringstream _log4cplus_buf; \
+			_log4cplus_buf << logEvent; \
+			_rolly_logger.forcedLog(log4cplus::WARN_LOG_LEVEL, _log4cplus_buf.str(), __FILE__, __LINE__); \
+		} \
+	} while(0)
 #define LOG_WARN_STR(logEvent) \
-    do { \
-        if(_rolly_logger.isEnabledFor(log4cplus::WARN_LOG_LEVEL)) { \
-            _rolly_logger.forcedLog(log4cplus::WARN_LOG_LEVEL, logEvent, __FILE__, __LINE__); \
-        } \
-    } while(0)
+	do { \
+		if(_rolly_logger.isEnabledFor(log4cplus::WARN_LOG_LEVEL)) { \
+			_rolly_logger.forcedLog(log4cplus::WARN_LOG_LEVEL, logEvent, __FILE__, __LINE__); \
+		} \
+	} while(0)
 #else
 #define LOG_WARN(logEvent)
 #define LOG_WARN_STR(logEvent)
@@ -168,19 +168,19 @@ using namespace log4cplus::helpers;
  */
 #if !defined(LOG4CPLUS_DISABLE_ERROR)
 #define LOG_ERROR(logEvent) \
-    do { \
-        if(_rolly_logger.isEnabledFor(log4cplus::ERROR_LOG_LEVEL)) { \
-            log4cplus::tostringstream _log4cplus_buf; \
-            _log4cplus_buf << logEvent; \
-            _rolly_logger.forcedLog(log4cplus::ERROR_LOG_LEVEL, _log4cplus_buf.str(), __FILE__, __LINE__); \
-        } \
-    } while(0)
+	do { \
+		if(_rolly_logger.isEnabledFor(log4cplus::ERROR_LOG_LEVEL)) { \
+			log4cplus::tostringstream _log4cplus_buf; \
+			_log4cplus_buf << logEvent; \
+			_rolly_logger.forcedLog(log4cplus::ERROR_LOG_LEVEL, _log4cplus_buf.str(), __FILE__, __LINE__); \
+		} \
+	} while(0)
 #define LOG_ERROR_STR(logEvent) \
-    do { \
-        if(_rolly_logger.isEnabledFor(log4cplus::ERROR_LOG_LEVEL)) { \
-            _rolly_logger.forcedLog(log4cplus::ERROR_LOG_LEVEL, logEvent, __FILE__, __LINE__); \
-        } \
-    } while(0)
+	do { \
+		if(_rolly_logger.isEnabledFor(log4cplus::ERROR_LOG_LEVEL)) { \
+			_rolly_logger.forcedLog(log4cplus::ERROR_LOG_LEVEL, logEvent, __FILE__, __LINE__); \
+		} \
+	} while(0)
 #else
 #define LOG_ERROR(logEvent)
 #define LOG_ERROR_STR(logEvent)
@@ -191,19 +191,19 @@ using namespace log4cplus::helpers;
  */
 #if !defined(LOG4CPLUS_DISABLE_FATAL)
 #define LOG_FATAL(logEvent) \
-    do { \
-        if(_rolly_logger.isEnabledFor(log4cplus::FATAL_LOG_LEVEL)) { \
-            log4cplus::tostringstream _log4cplus_buf; \
-            _log4cplus_buf << logEvent; \
-            _rolly_logger.forcedLog(log4cplus::FATAL_LOG_LEVEL, _log4cplus_buf.str(), __FILE__, __LINE__); \
-        } \
-    } while(0)
+	do { \
+		if(_rolly_logger.isEnabledFor(log4cplus::FATAL_LOG_LEVEL)) { \
+			log4cplus::tostringstream _log4cplus_buf; \
+			_log4cplus_buf << logEvent; \
+			_rolly_logger.forcedLog(log4cplus::FATAL_LOG_LEVEL, _log4cplus_buf.str(), __FILE__, __LINE__); \
+		} \
+	} while(0)
 #define LOG_FATAL_STR(logEvent) \
-    do { \
-        if(_rolly_logger.isEnabledFor(log4cplus::FATAL_LOG_LEVEL)) { \
-            _rolly_logger.forcedLog(log4cplus::FATAL_LOG_LEVEL, logEvent, __FILE__, __LINE__); \
-        } \
-    } while(0)
+	do { \
+		if(_rolly_logger.isEnabledFor(log4cplus::FATAL_LOG_LEVEL)) { \
+			_rolly_logger.forcedLog(log4cplus::FATAL_LOG_LEVEL, logEvent, __FILE__, __LINE__); \
+		} \
+	} while(0)
 #else
 #define LOG_FATAL(logEvent)
 #define LOG_FATAL_STR(logEvent)

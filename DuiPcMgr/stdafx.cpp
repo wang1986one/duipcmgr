@@ -1,7 +1,5 @@
 #include "stdafx.h"
 
-ZThread::ThreadedExecutor g_ThreadExecutor;
-
 void _Trace(LPCTSTR lpszFmt, ...)
 {
 	va_list args;
