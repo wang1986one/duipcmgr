@@ -5,8 +5,6 @@
 #include "Utils/File/FileUtil.h"
 #include "Utils/System/Vista.h"
 
-using namespace ZThread;
-
 CMainWnd::CMainWnd(void)
 : m_btnClose(NULL)
 , m_btnMin(NULL)

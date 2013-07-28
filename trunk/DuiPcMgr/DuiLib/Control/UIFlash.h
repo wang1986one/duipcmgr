@@ -1,6 +1,8 @@
 #ifndef __UIFLASH_H__
 #define __UIFLASH_H__
 #pragma once
+#import "Flash11.tlb" raw_interfaces_only, named_guids
+using namespace ShockwaveFlashObjects;
 #include "Utils/FlashEventHandler.h"
 
 

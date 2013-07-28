@@ -24,6 +24,28 @@
 #include "VLD/vld.h"
 
 //////////////////////////////////////////////////////////////////////////
+// 日志类
+#define LOG4CPLUS_STATIC
+#include "log.h"
+#pragma comment(lib,"ws2_32.lib")
+using namespace log4cplus;
+using namespace log4cplus::helpers;
+
+#if _MSC_VER >= 1600
+#ifdef _DEBUG
+#       pragma comment(lib, "log4cplusSUD_VS2012.lib")
+#else
+#       pragma comment(lib, "log4cplusSU_VS2012.lib")
+#endif
+#else
+#ifdef _DEBUG
+#       pragma comment(lib, "log4cplusUSD.lib")
+#else
+#       pragma comment(lib, "log4cplusUS.lib")
+#endif
+#endif
+
+//////////////////////////////////////////////////////////////////////////
 // GUI库
 #include "DuiLib/UIlib.h"
 using namespace DuiLib;
@@ -41,26 +63,6 @@ using namespace DuiLib;
 #       pragma comment(lib, "DuiLib.lib")
 #   endif
 #endif
-
-//////////////////////////////////////////////////////////////////////////
-// ZThread 多线程库
-//#include "ZThread/ZThread.h"		// ZThread Header
-#include "ZThread/Runnable.h"		// 任务执行接口
-#include "ZThread/Cancelable.h"		// 任务取消接口
-#include "ZThread/Thread.h"			// 线程类
-#include "ZThread/ThreadedExecutor.h"	// 任务执行器，一个任务一个线程
-#include "ZThread/CountedPtr.h"		// 引用计数
-#include "ZThread/Guard.h"				// 保护锁
-#include "ZThread/Singleton.h"
-#include "ZThread/Condition.h"
-
-#ifdef _DEBUG
-#pragma comment(lib, "ZThreadLib_d.lib")
-#else
-#pragma comment(lib, "ZThreadLib.lib")
-#endif
-
-extern ZThread::ThreadedExecutor g_ThreadExecutor;
 
 //////////////////////////////////////////////////////////////////////////
 // Utils库
