@@ -57,7 +57,6 @@ CStringW Utils::MbcsToUnicode(LPCSTR pMbcs)
 	{
 		return L"";
 	}
-
 	return tempBuffer;
 }
 

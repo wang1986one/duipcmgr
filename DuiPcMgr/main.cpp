@@ -13,7 +13,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR /*l
 {
 	std::locale::global(std::locale("chs"));
 	log4cplus::PropertyConfigurator::doConfigure(L".\\config\\log4cplus.cfg");
-	//日志的几种写法，还有LOG_DEBUG(),LOG_ERROR，具体的可在log.h中参看
+	//日志的几种写法，还有LOG_DEBUG(),LOG_ERROR(),LOG_WARN()具体的可在log.h中参看
 	LOG_TRACE_METHOD();
 	LOG_INFO(L"日志初始化成功......");
 	int i = 1024;
