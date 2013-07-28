@@ -43,7 +43,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;.\LOG4CPLUS\log4cplus-1.0.4\include\&quot;;."
+				AdditionalIncludeDirectories=".;LOG4CPLUS\log4cplus-1.0.4\include;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_CRT_RAND_S;LOG4CPLUS_STATIC"
 				MinimalRebuild="false"
 				ExceptionHandling="2"
@@ -125,7 +125,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="."
+				AdditionalIncludeDirectories=".;LOG4CPLUS\log4cplus-1.0.4\include;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;UILIB_STATIC;_CRT_RAND_S"
 				ExceptionHandling="2"
 				RuntimeLibrary="0"

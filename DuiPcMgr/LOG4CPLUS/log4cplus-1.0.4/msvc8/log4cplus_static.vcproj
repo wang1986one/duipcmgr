@@ -118,6 +118,7 @@
 				PreprocessorDefinitions="NDEBUG;WIN32;_LIB;_WINDOWS;LOG4CPLUS_STATIC;INSIDE_LOG4CPLUS;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS"
 				StringPooling="true"
 				RuntimeLibrary="0"
+				Detect64BitPortabilityProblems="false"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
