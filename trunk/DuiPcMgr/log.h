@@ -16,14 +16,6 @@
 #include "log4cplus\layout.h"
 #include "log4cplus\loggingmacros.h"
 
-wchar_t* charToWChar(const char* str)
-{
-	int length = ::MultiByteToWideChar(CP_ACP,0,str,strlen(str),NULL,0);  
-	wchar_t* m_wchar=new wchar_t[length+1];  
-	::MultiByteToWideChar(CP_ACP,0,str,strlen(str),m_wchar,length);  
-	m_wchar[length]='\0';  
-	return m_wchar; 
-}
 using namespace log4cplus;
 using namespace log4cplus::helpers;
 #if defined(LOG4CPLUS_DISABLE_FATAL) && !defined(LOG4CPLUS_DISABLE_ERROR)
@@ -51,16 +43,16 @@ using namespace log4cplus::helpers;
 #ifndef LOG4CPLUS_DISABLE_FATAL
 #ifdef UNICODE
 #define DECLARE_SUBLOGITEM(SubLogItemName) \
-	static log4cplus::Logger _rolly_logger = log4cplus::Logger::getInstance(charToWChar(#SubLogItemName))
+	static log4cplus::Logger _rolly_logger = log4cplus::Logger::getInstance(helpers::towstring(#SubLogItemName))
 	
 
 //支持class1.module格式,目前对于多模块模式还有一点问题，请使用上面的DECLARE_SUBLOGITEM
 #define DECLARE_SUBLOGITEM2(SubLogItemName1, SubLogItemName2) \
-	static log4cplus::Logger _rolly_logger = log4cplus::Logger::getInstance(charToWChar(#SubLogItemName1)"." charToWChar(#SubLogItemName2))
+	static log4cplus::Logger _rolly_logger = log4cplus::Logger::getInstance(helpers::towstring(#SubLogItemName1)"." helpers::towstring(#SubLogItemName2))
 
 //支持class1.module.submodule格式
 #define DECLARE_SUBLOGITEM3(SubLogItemName1, SubLogItemName2, SubLogItemName3) \
-	static log4cplus::Logger _rolly_logger = log4cplus::Logger::getInstance((#SubLogItemName1)"." charToWChar(#SubLogItemName2)"." charToWChar(#SubLogItemName3))
+	static log4cplus::Logger _rolly_logger = log4cplus::Logger::getInstance(helpers::towstring(#SubLogItemName1)"." helpers::towstring(#SubLogItemName2)"." helpers::towstring(#SubLogItemName3))
 #else
 #define DECLARE_SUBLOGITEM(SubLogItemName) \
 	static log4cplus::Logger _rolly_logger = log4cplus::Logger::getInstance(#SubLogItemName)
@@ -81,7 +73,7 @@ using namespace log4cplus::helpers;
  */
 #if !defined(LOG4CPLUS_DISABLE_TRACE)
 #define LOG_TRACE_METHOD() \
-    log4cplus::TraceLogger _log4cplus_trace_logger(_rolly_logger, charToWChar(__FUNCTION__), __FILE__, __LINE__)
+    log4cplus::TraceLogger _log4cplus_trace_logger(_rolly_logger, helpers::towstring(__FUNCTION__), __FILE__, __LINE__)
 #define LOG_TRACE(logEvent) \
     do { \
         if(_rolly_logger.isEnabledFor(log4cplus::TRACE_LOG_LEVEL)) { \
