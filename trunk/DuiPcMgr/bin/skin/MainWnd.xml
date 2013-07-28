@@ -24,10 +24,11 @@
         <HorizontalLayout bordercolor="#FF0000FF" inset="0,0,0,0">
           <HorizontalLayout bordercolor="#FF0000FF" >
             <Control />
-            <Button name="minbtn"     tooltip="最小化" width="40" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='Common\minimize.png'" hotimage="file='Common\minimize_h.png'" pushedimage="file='Common\minimize_p.png'" />
+            <Button name="Setting"   tooltip="设置"   width="30" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='Common\setting.png' source='0,0,30,20' " hotimage="file='Common\setting.png' source='31,0,61,20' " pushedimage="file='Common\setting.png' source='62,0,92,20' " padding="0,1,0,0" />
+            <Button name="minbtn"    tooltip="最小化" width="30" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='Common\minimize.png' source='0,0,30,20'" hotimage="file='Common\minimize.png' source='31,0,61,20'" pushedimage="file='Common\minimize.png' source='62,0,92,20'" />
             <!--<Button name="maxbtn"     tooltip="最大化" width="25" height="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='Common\maximize.png'" hotimage="file='Common\maximize_h.png'" pushedimage="file='Common\maximize_h.png'" />-->
             <!--<Button name="restorebtn" tooltip="恢复"  width="25" height="18" visible="false" align="center" normalimage="file='Common\restore.png'" hotimage="file='Common\restore_h.png'" pushedimage="file='Common\restore_p.png'" />-->
-            <Button name="closebtn"   tooltip="关闭" width="40" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='Common\close.png'" hotimage="file='Common\close_h.png'" pushedimage="file='Common\close_p.png'" />
+            <Button name="closebtn"  tooltip="关闭"   width="40" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='Common\close.png' source='0,0,40,20' " hotimage="file='Common\close.png' source='41,0,81,20' " pushedimage="file='Common\close.png' source='82,0,122,20'" padding="0,1,0,0" />
           </HorizontalLayout>
         </HorizontalLayout>
         <Control bordercolor="#FF0000FF" />
