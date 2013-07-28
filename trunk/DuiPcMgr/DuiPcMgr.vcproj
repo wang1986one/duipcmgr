@@ -45,7 +45,7 @@
 				Optimization="0"
 				AdditionalIncludeDirectories="&quot;.\LOG4CPLUS\log4cplus-1.0.4\include\&quot;;."
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_CRT_RAND_S;LOG4CPLUS_STATIC"
-				MinimalRebuild="true"
+				MinimalRebuild="false"
 				ExceptionHandling="2"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
