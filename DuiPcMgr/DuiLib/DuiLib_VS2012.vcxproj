@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E106ACD7-4E53-4AEE-942B-D0DD426DB34E}</ProjectGuid>
     <RootNamespace>DuiLib</RootNamespace>
+    <ProjectName>DuiLib</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" Label="Configuration">
@@ -43,15 +44,15 @@
     <_ProjectFileVersion>11.0.51106.1</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
-    <OutDir>$(SolutionDir)bin\</OutDir>
+    <OutDir>../bin\</OutDir>
     <IntDir>$(SolutionDir)Duilib\Build\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <EmbedManifest>false</EmbedManifest>
-    <TargetName>$(ProjectName)_ud</TargetName>
+    <TargetName>$(ProjectName)_VS2012_UD</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
-    <OutDir>$(SolutionDir)Lib\</OutDir>
+    <OutDir>../bin\</OutDir>
     <IntDir>$(SolutionDir)Duilib\Build\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)_u</TargetName>
   </PropertyGroup>
@@ -82,12 +83,12 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>$(OutDir)$(ProjectName)_ud.dll</OutputFile>
+      <OutputFile>../bin\$(ProjectName)_VS2012_UD.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
       <BaseAddress>0x11000000</BaseAddress>
-      <ImportLibrary>$(SolutionDir)Lib\DuiLib_ud.lib</ImportLibrary>
+      <ImportLibrary>../bin\$(ProjectName)_VS2012_UD.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <Bscmake>
@@ -120,7 +121,7 @@
       <Culture>0x0406</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>$(SolutionDir)Lib\$(ProjectName)_u.lib</OutputFile>
+      <OutputFile>../bin\$(ProjectName)_VS2012_U.lib</OutputFile>
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>

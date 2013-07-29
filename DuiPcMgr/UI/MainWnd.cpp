@@ -45,7 +45,7 @@ void CMainWnd::OnClick( TNotifyUI &msg )
 void CMainWnd::InitWindow()
 {
 	m_btnClose		= static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("closebtn")));
-	m_btnMin			= static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("minbtn")));
+	m_btnMin		= static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("minbtn")));
 	m_btnMax		= static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("maxbtn")));
 	m_btnRestore	= static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("restorebtn")));
 }
