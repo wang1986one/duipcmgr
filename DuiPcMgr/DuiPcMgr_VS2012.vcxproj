@@ -50,6 +50,7 @@
     <LinkIncremental>false</LinkIncremental>
     <TargetName>$(ProjectName)_UD</TargetName>
     <IncludePath>$(ProjectDir)log4cplus-1.1.2-rc2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>lib\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
     <OutDir>bin\</OutDir>
