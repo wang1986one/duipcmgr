@@ -49,7 +49,7 @@
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <EmbedManifest>false</EmbedManifest>
-    <TargetName>$(ProjectName)_VS2012_UD</TargetName>
+    <TargetName>$(ProjectName)_ud</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
     <OutDir>../bin\</OutDir>
@@ -83,12 +83,12 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>../bin\$(ProjectName)_VS2012_UD.dll</OutputFile>
+      <OutputFile>../bin\$(ProjectName)_UD.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
       <BaseAddress>0x11000000</BaseAddress>
-      <ImportLibrary>../bin\$(ProjectName)_VS2012_UD.lib</ImportLibrary>
+      <ImportLibrary>../bin\$(ProjectName)_ud.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <Bscmake>
