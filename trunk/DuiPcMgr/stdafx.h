@@ -33,9 +33,9 @@ using namespace log4cplus::helpers;
 
 #if _MSC_VER >= 1600
 #ifdef _DEBUG
-#       pragma comment(lib, "log4cplusSUD_VS2012.lib")
+#       pragma comment(lib, "log4cplusS_UD_VS2012.lib")
 #else
-#       pragma comment(lib, "log4cplusSU_VS2012.lib")
+#       pragma comment(lib, "log4cplusS_U_VS2012.lib")
 #endif
 #else
 #ifdef _DEBUG

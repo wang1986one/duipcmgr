@@ -45,15 +45,18 @@
     <_ProjectFileVersion>11.0.51106.1</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
-    <OutDir>$(SolutionDir)Bin\</OutDir>
+    <OutDir>./bin\</OutDir>
     <IntDir>.\Build\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>$(ProjectName)_d</TargetName>
+    <TargetName>$(ProjectName)_UD</TargetName>
+    <IncludePath>$(ProjectDir)log4cplus-1.1.2-rc2\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
-    <OutDir>$(SolutionDir)bin\</OutDir>
+    <OutDir>bin\</OutDir>
     <IntDir>.\Build\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)log4cplus-1.1.2-rc2\include;$(IncludePath)</IncludePath>
+    <TargetName>$(ProjectName)_U</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
     <ClCompile>
@@ -70,7 +73,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <OutputFile>$(OutDir)$(ProjectName)_d.exe</OutputFile>
+      <OutputFile>./bin\$(ProjectName)_UD.exe</OutputFile>
       <AdditionalLibraryDirectories>lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <UACExecutionLevel>AsInvoker</UACExecutionLevel>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -104,6 +107,7 @@
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <ImportLibrary>lib\$(TargetName).lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
+      <OutputFile>bin\$(ProjectName)_U.exe</OutputFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
