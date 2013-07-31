@@ -11,7 +11,7 @@
   <Default name="Combo" value="normalimage=&quot;file='Common\combo.png' source='0,0,100,22' corner='2,2,20,2'&quot; hotimage=&quot;file='Common\combo.png' source='0,22,100,44' corner='2,2,22,2'&quot; pushedimage=&quot;file='Common\combo.png' source='0,44,100,66' corner='2,2,22,2'&quot;" />
   <Default name="Option" value="normalimage=&quot;file='Common\TabLayoutbtn.png'&quot; hotimage=&quot;file='Common\TabLayoutbtn_h.png'&quot; pushedimage=&quot;file='Common\TabLayoutbtn_p.png'&quot; selectedimage=&quot;file='Common\TabLayoutbtn_p.png'&quot;" />
   <VerticalLayout name="MainWnd" bkcolor="#FF242424">
-    <HorizontalLayout name="Header" height="145" bkimage="Common\mainFramHeader1.png" bordercolor="#FF242424" bordersize="2,2,2,0">
+    <HorizontalLayout name="Header" height="145" bkimage="file='Common\mainFramHeader1.png' corner='0,61,920,0' " bordercolor="#FF242424" bordersize="2,2,2,0">
       <VerticalLayout width="714" height="145" >
         <!-- LOGO -->
         <ChildLayout xmlfile="MgrLOGO.xml" width="207" height="56" padding="20,20,0,0" />

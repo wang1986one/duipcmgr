@@ -2,7 +2,7 @@
 <Window size="990,446">
   <VerticalLayout bordercolor="#FF0000FF">
     <HorizontalLayout bordercolor="#FF00FF00">
-      <VerticalLayout name="SidebarLayout" bordersize="1" width="220" padding="0,0,0,0" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" bkimage="Common\空地君临时背景.png" >
+      <VerticalLayout name="SidebarLayout" bordersize="1" width="220" padding="0,0,0,0" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" bkimage="file='Common\空地君临时背景.png' corner='135,460,2,2'" >
         <Text text="{c #386382}{n}  空地君 {/c}" textpadding="60,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
       </VerticalLayout>
       <VerticalLayout>
