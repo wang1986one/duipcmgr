@@ -17,8 +17,8 @@
 	<Configurations>
 		<Configuration
 			Name="UnicodeDebug|Win32"
-			OutputDirectory="$(SolutionDir)"
-			IntermediateDirectory="$(OutDir)Duilib\Build\$(ConfigurationName)"
+			OutputDirectory="..\..\Bin\"
+			IntermediateDirectory="$(ProjectDir)\Build\$(ConfigurationName)"
 			ConfigurationType="2"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
 			UseOfMFC="0"
@@ -73,7 +73,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="..\bin\DuiLib_ud.dll"
+				OutputFile="..\..\Bin\DuiLib_ud.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
 				AdditionalLibraryDirectories=""
@@ -112,8 +112,8 @@
 		</Configuration>
 		<Configuration
 			Name="UnicodeRelease|Win32"
-			OutputDirectory="$(SolutionDir)"
-			IntermediateDirectory="$(OutDir)Duilib\Build\$(ConfigurationName)"
+			OutputDirectory="..\..\Bin\"
+			IntermediateDirectory="$(ProjectDir)\Build\$(ConfigurationName)"
 			ConfigurationType="2"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
 			UseOfMFC="0"
@@ -167,7 +167,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="..\bin\DuiLib_u.dll"
+				OutputFile="..\..\Bin\DuiLib_ud.dll"
 			/>
 			<Tool
 				Name="VCALinkTool"

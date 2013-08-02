@@ -18,7 +18,7 @@
 	<Configurations>
 		<Configuration
 			Name="UnicodeDebug|Win32"
-			OutputDirectory="$(SolutionDir)Bin"
+			OutputDirectory="..\Bin"
 			IntermediateDirectory=".\Build\$(ConfigurationName)"
 			ConfigurationType="1"
 			UseOfMFC="0"
@@ -65,7 +65,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="..\DuiPcMgr\bin\$(ProjectName)_d.exe"
+				OutputFile="..\Bin\$(ProjectName)_ud.exe"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="lib;"
 				GenerateDebugInformation="true"
@@ -98,7 +98,7 @@
 		</Configuration>
 		<Configuration
 			Name="UnicodeRelease|Win32"
-			OutputDirectory="$(SolutionDir)bin"
+			OutputDirectory="..\Bin"
 			IntermediateDirectory=".\Build\$(ConfigurationName)"
 			ConfigurationType="1"
 			UseOfMFC="0"
@@ -145,7 +145,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="..\DuiPcMgr\bin\$(ProjectName).exe"
+				OutputFile="..\Bin\$(ProjectName)_u.exe"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="lib"
 				GenerateDebugInformation="true"
