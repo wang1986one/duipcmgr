@@ -44,7 +44,7 @@
     <_ProjectFileVersion>11.0.51106.1</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
-    <OutDir>../bin\</OutDir>
+    <OutDir>../../Bin\</OutDir>
     <IntDir>$(SolutionDir)Duilib\Build\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
@@ -52,7 +52,7 @@
     <TargetName>$(ProjectName)_ud</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
-    <OutDir>../bin\</OutDir>
+    <OutDir>../../bin\</OutDir>
     <IntDir>$(SolutionDir)Duilib\Build\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)_u</TargetName>
   </PropertyGroup>
@@ -83,7 +83,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>../bin\$(ProjectName)_UD.dll</OutputFile>
+      <OutputFile>../../Bin\$(ProjectName)_UD.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
@@ -121,7 +121,7 @@
       <Culture>0x0406</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>../bin\$(ProjectName)_VS2012_U.lib</OutputFile>
+      <OutputFile>../../bin\$(ProjectName)_VS2012_U.lib</OutputFile>
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>

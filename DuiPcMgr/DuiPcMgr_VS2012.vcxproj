@@ -45,7 +45,7 @@
     <_ProjectFileVersion>11.0.51106.1</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
-    <OutDir>./bin\</OutDir>
+    <OutDir>../Bin\</OutDir>
     <IntDir>.\Build\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <TargetName>$(ProjectName)_UD</TargetName>
@@ -74,7 +74,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <OutputFile>./bin\$(ProjectName)_UD.exe</OutputFile>
+      <OutputFile>../Bin\$(ProjectName)_UD.exe</OutputFile>
       <AdditionalLibraryDirectories>lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <UACExecutionLevel>AsInvoker</UACExecutionLevel>
       <GenerateDebugInformation>true</GenerateDebugInformation>

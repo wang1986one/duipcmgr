@@ -426,6 +426,9 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <OutputFile>$(IntDir)log4cplus.bsc</OutputFile>
     </Bscmake>
+    <PostBuildEvent>
+      <Command>Move ../../lib\$(ProjectName)_U_VS2012..dll ../../../lib\</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|x64'">
     <Midl>
