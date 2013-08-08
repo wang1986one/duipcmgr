@@ -463,6 +463,22 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="Register"
+				>
+				<File
+					RelativePath=".\Utils\Register\RegistryKey.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Utils\Register\RegistryKey.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Utils\Register\RegKeyConvertString.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="TinyXML"
