@@ -26,11 +26,11 @@
 //////////////////////////////////////////////////////////////////////////
 // ÈÕÖ¾Àà
 #define LOG4CPLUS_STATIC
-#include "log.h"
+#include "Utils/Log4cplus.h"
 #pragma comment(lib,"ws2_32.lib")
 using namespace log4cplus;
 using namespace log4cplus::helpers;
-
+extern Utils::CLogger g_logger;
 #if _MSC_VER >= 1600
 #ifdef _DEBUG
 #       pragma comment(lib, "log4cplusS_UD_VS2012.lib")
@@ -67,11 +67,4 @@ using namespace DuiLib;
 //////////////////////////////////////////////////////////////////////////
 // Utils¿â
 #include "Utils/Utils.h"
-
-#ifdef _DEBUG 
-void _Trace(LPCTSTR lpszFmt, ...);
-#define _TRACE _Trace  
-#else  
-#define _TRACE  
-#endif 
 

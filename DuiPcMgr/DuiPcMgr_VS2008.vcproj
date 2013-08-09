@@ -44,7 +44,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories=".;log4cplus-1.1.2-rc2\include;"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_CRT_RAND_S;LOG4CPLUS_STATIC"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_CRT_RAND_S"
 				MinimalRebuild="false"
 				ExceptionHandling="2"
 				BasicRuntimeChecks="3"
@@ -225,6 +225,14 @@
 			</File>
 			<File
 				RelativePath=".\Utils\DelegateTemplate.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Utils\Log4cplus.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Utils\Log4cplus.h"
 				>
 			</File>
 			<File
@@ -715,6 +723,14 @@
 		<Filter
 			Name="Core"
 			>
+			<File
+				RelativePath=".\Core\SoftwareManager.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Core\SoftwareManager.h"
+				>
+			</File>
 		</Filter>
 		<File
 			RelativePath=".\log.h"
