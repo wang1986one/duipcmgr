@@ -168,6 +168,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Utils\Hash\MD5.cpp" />
+    <ClCompile Include="Utils\Log4cplus.cpp" />
     <ClCompile Include="Utils\MemBuffer.cpp" />
     <ClCompile Include="Utils\Path\WinPath.cpp" />
     <ClCompile Include="Utils\Register\RegistryKey.cpp" />
@@ -214,6 +215,7 @@
     <ClInclude Include="Utils\File\FileVersionInfo.h" />
     <ClInclude Include="Utils\Hash\crc32.h" />
     <ClInclude Include="Utils\Hash\MD5.h" />
+    <ClInclude Include="Utils\Log4cplus.h" />
     <ClInclude Include="Utils\MemBuffer.h" />
     <ClInclude Include="Utils\Network\WinHttpDef.h" />
     <ClInclude Include="Utils\Path\WinPath.h" />

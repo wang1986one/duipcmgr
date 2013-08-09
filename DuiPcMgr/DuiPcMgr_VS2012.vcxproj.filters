@@ -112,6 +112,9 @@
     <ClCompile Include="Utils\Register\RegistryKey.cpp">
       <Filter>Utils\Register</Filter>
     </ClCompile>
+    <ClCompile Include="Utils\Log4cplus.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UI\MainWnd.h">
@@ -254,6 +257,9 @@
     </ClInclude>
     <ClInclude Include="Utils\Register\RegKeyConvertString.h">
       <Filter>Utils\Register</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Log4cplus.h">
+      <Filter>Utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
