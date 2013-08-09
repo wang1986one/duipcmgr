@@ -43,9 +43,9 @@ namespace Utils
 	}
 
 
-	CRegistryKey::CRegistryKey()
+	CRegistryKey::CRegistryKey(HKEY hKey )
 	{
-		m_hRootKey  = NULL;
+		m_hRootKey  = hKey;
 		m_hKey		= NULL;
 	}
 	CRegistryKey::~CRegistryKey()
@@ -88,7 +88,16 @@ namespace Utils
 		return FALSE;
 
 	}
-
+	CString CRegistryKey::EnumKey(DWORD dwIndex)
+	{
+		TCHAR achKey[MAX_PATH];
+		DWORD dwLen = MAX_PATH;
+		LONG ret = RegEnumKeyEx(m_hKey, dwIndex, achKey, &dwLen, NULL,NULL,NULL,NULL);
+		if(ERROR_SUCCESS == ret)
+			return  achKey;
+		else
+			return _T("");
+	}
 	void CRegistryKey::Close()
 	{
 		if(m_hKey)
@@ -97,6 +106,24 @@ namespace Utils
 			m_hKey=NULL;
 		}
 
+	}
+	BOOL CRegistryKey::Open(LPCTSTR lpSubKey)
+	{
+		ASSERT(m_hRootKey||m_hKey);
+		ASSERT(lpSubKey);
+		HKEY hKey;
+		if(NULL == m_hKey)
+			m_hKey = m_hRootKey;
+		long lReturn = RegOpenKeyEx(m_hKey,lpSubKey,0L,KEY_ALL_ACCESS,&hKey);
+    
+		if(lReturn !=ERROR_SUCCESS)
+		{
+			m_hKey = NULL;
+			return FALSE;
+		}
+		m_hKey = hKey;
+		return TRUE;
+	
 	}
 
 	BOOL CRegistryKey::DeleteValue(LPCTSTR lpValueName)
@@ -195,7 +222,7 @@ namespace Utils
 		DWORD dwDest;
 		long lReturn=RegQueryValueEx(m_hKey,lpValueName,NULL,&dwType,(BYTE *)&dwDest,&dwSize);
 
-		if(lReturn==ERROR_SUCCESS)
+		if(lReturn==ERROR_SUCCESS && REG_DWORD == dwType)
 		{
 			*pdwVal=dwDest;
 			return TRUE;
