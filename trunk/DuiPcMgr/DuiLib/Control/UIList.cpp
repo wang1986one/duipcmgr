@@ -27,6 +27,7 @@ CListUI::CListUI() : m_pCallback(NULL), m_bScrollSelect(false), m_iCurSel(-1), m
     m_ListInfo.dwDisabledTextColor = 0xFFCCCCCC;
     m_ListInfo.dwDisabledBkColor = 0xFFFFFFFF;
     m_ListInfo.dwLineColor = 0;
+	m_ListInfo.dwVLineColor = 0;
     m_ListInfo.bShowHtml = false;
     m_ListInfo.bMultiExpandable = false;
     ::ZeroMemory(&m_ListInfo.rcTextPadding, sizeof(m_ListInfo.rcTextPadding));
@@ -570,7 +571,11 @@ void CListUI::SetItemLineColor(DWORD dwLineColor)
     m_ListInfo.dwLineColor = dwLineColor;
     Invalidate();
 }
-
+void CListUI::SetItemVLineColor(DWORD dwLineColor)
+{
+    m_ListInfo.dwVLineColor = dwLineColor;
+    Invalidate();
+}
 bool CListUI::IsItemShowHtml()
 {
     return m_ListInfo.bShowHtml;
@@ -742,6 +747,12 @@ void CListUI::SetAttribute(LPCTSTR pstrName, LPCTSTR pstrValue)
         LPTSTR pstr = NULL;
         DWORD clrColor = _tcstoul(pstrValue, &pstr, 16);
         SetItemLineColor(clrColor);
+    }
+	else if( _tcscmp(pstrName, _T("itemVlinecolor")) == 0 ) {
+        if( *pstrValue == _T('#')) pstrValue = ::CharNext(pstrValue);
+        LPTSTR pstr = NULL;
+        DWORD clrColor = _tcstoul(pstrValue, &pstr, 16);
+        SetItemVLineColor(clrColor);
     }
     else if( _tcscmp(pstrName, _T("itemshowhtml")) == 0 ) SetItemShowHtml(_tcscmp(pstrValue, _T("true")) == 0);
     else CVerticalLayoutUI::SetAttribute(pstrName, pstrValue);
@@ -2035,7 +2046,27 @@ void CListTextElementUI::DrawItemText(HDC hDC, const RECT& rcItem)
         ((CDuiString*)(m_sLinks + i))->Empty();
     }
 }
+// 画竖线 2013.08.09 不乖打PP添加
+void CListTextElementUI::DrawItemBk(HDC hDC, const RECT& rcItem)
+{
+	CListElementUI::DrawItemBk(hDC, rcItem);
+    if( m_pOwner == NULL )
+		return;
+	
+	TListInfoUI* pInfo = m_pOwner->GetListInfo();
+	DWORD dwVLineColor = pInfo->dwVLineColor;
 
+	if(dwVLineColor == 0)
+		return;
+	m_nLinks = 0;
+	int nLinks = lengthof(m_rcLinks);
+	for( int i = 0; i < pInfo->nColumns; i++ )
+	{
+		RECT rcLine = { pInfo->rcColumn[i].right-1, m_rcItem.top,
+			pInfo->rcColumn[i].right-1,m_rcItem.bottom };
+		CRenderEngine::DrawLine(hDC, rcLine, 1, GetAdjustColor(pInfo->dwVLineColor));
+	}
+}
 /////////////////////////////////////////////////////////////////////////////////////
 //
 //

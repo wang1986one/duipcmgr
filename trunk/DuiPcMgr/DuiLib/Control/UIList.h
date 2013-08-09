@@ -34,6 +34,7 @@ typedef struct tagTListInfoUI
     DWORD dwDisabledBkColor;
     CDuiString sDisabledImage;
     DWORD dwLineColor;
+	DWORD dwVLineColor; // 画竖线 2013.08.09 不乖打PP添加
     bool bShowHtml;
     bool bMultiExpandable;
 } TListInfoUI;
@@ -140,6 +141,7 @@ public:
     void SetDisabledItemBkColor(DWORD dwBkColor);
     void SetDisabledItemImage(LPCTSTR pStrImage);
     void SetItemLineColor(DWORD dwLineColor);
+	void SetItemVLineColor(DWORD dwLineColor);
     bool IsItemShowHtml();
     void SetItemShowHtml(bool bShowHtml = true);
 	RECT GetItemTextPadding() const;
@@ -326,7 +328,7 @@ public:
     void DoEvent(TEventUI& event);
     void SetAttribute(LPCTSTR pstrName, LPCTSTR pstrValue);
 
-    void DrawItemBk(HDC hDC, const RECT& rcItem);
+    virtual void DrawItemBk(HDC hDC, const RECT& rcItem);
 
 protected:
     int m_iIndex;
@@ -378,7 +380,8 @@ public:
     SIZE EstimateSize(SIZE szAvailable);
 
     void DrawItemText(HDC hDC, const RECT& rcItem);
-
+	// 画竖线 2013.08.09 不乖打PP添加
+	void DrawItemBk(HDC hDC, const RECT& rcItem);
 protected:
     enum { MAX_LINK = 8 };
     int m_nLinks;
