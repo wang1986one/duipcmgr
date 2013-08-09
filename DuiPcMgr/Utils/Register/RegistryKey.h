@@ -20,7 +20,7 @@ namespace Utils
 		// Construction
 	public:
 		CRegistryKey(HKEY hRootKey,LPCTSTR lpKey);
-		CRegistryKey();
+		CRegistryKey(HKEY hKey = NULL);
 		CRegistryKey(HKEY hKey,LPCTSTR lpKey,BOOL bCreate);
 		virtual ~CRegistryKey();
 
@@ -46,6 +46,9 @@ namespace Utils
 		BOOL DeleteValue(LPCTSTR lpValueName);
 		void Close();
 		BOOL CreateKey(LPCTSTR lpSubKey);
+
+		CString EnumKey(DWORD dwIndex);
+		BOOL Open(LPCTSTR lpSubKey);
 
 	protected:
 		HKEY m_hKey;
