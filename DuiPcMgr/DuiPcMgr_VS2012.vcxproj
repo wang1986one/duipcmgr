@@ -112,6 +112,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Core\SoftwareManager.cpp" />
     <ClCompile Include="JSON\json_reader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">NotUsing</PrecompiledHeader>
@@ -169,6 +170,7 @@
     <ClCompile Include="Utils\Hash\MD5.cpp" />
     <ClCompile Include="Utils\MemBuffer.cpp" />
     <ClCompile Include="Utils\Path\WinPath.cpp" />
+    <ClCompile Include="Utils\Register\RegistryKey.cpp" />
     <ClCompile Include="Utils\StringUtil.cpp" />
     <ClCompile Include="Utils\System\Kernel32Mod.cpp" />
     <ClCompile Include="Utils\System\NTHelper.cpp" />
@@ -184,6 +186,7 @@
     <ClCompile Include="Utils\Window\TrayIcon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Core\SoftwareManager.h" />
     <ClInclude Include="JSON\autolink.h" />
     <ClInclude Include="JSON\config.h" />
     <ClInclude Include="JSON\features.h" />
@@ -214,6 +217,8 @@
     <ClInclude Include="Utils\MemBuffer.h" />
     <ClInclude Include="Utils\Network\WinHttpDef.h" />
     <ClInclude Include="Utils\Path\WinPath.h" />
+    <ClInclude Include="Utils\Register\RegistryKey.h" />
+    <ClInclude Include="Utils\Register\RegKeyConvertString.h" />
     <ClInclude Include="Utils\StringUtil.h" />
     <ClInclude Include="Utils\System\Kernel32Mod.h" />
     <ClInclude Include="Utils\System\NTHelper.h" />

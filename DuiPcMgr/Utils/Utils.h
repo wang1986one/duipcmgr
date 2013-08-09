@@ -36,6 +36,7 @@ typedef unsigned __int64 uint64;
 
 #include "StringUtil.h"
 #include "System/SystemInfo.h"
+#include "Register/RegistryKey.h"
 
 #ifdef _DEBUG
 	#ifndef TRACE

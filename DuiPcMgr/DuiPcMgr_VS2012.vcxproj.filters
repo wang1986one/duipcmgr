@@ -106,6 +106,12 @@
     <ClCompile Include="Utils\Utils.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
+    <ClCompile Include="Core\SoftwareManager.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Register\RegistryKey.cpp">
+      <Filter>Utils\Register</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UI\MainWnd.h">
@@ -240,6 +246,15 @@
     <ClInclude Include="Utils\Utils.h">
       <Filter>Utils</Filter>
     </ClInclude>
+    <ClInclude Include="Core\SoftwareManager.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Register\RegistryKey.h">
+      <Filter>Utils\Register</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Register\RegKeyConvertString.h">
+      <Filter>Utils\Register</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Resource">
@@ -289,6 +304,12 @@
     </Filter>
     <Filter Include="Utils\Window">
       <UniqueIdentifier>{2ae1ca64-413d-4c82-bfbe-7a6793f3a98d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{68cb8814-9c5d-4847-8e34-9afe88a6840f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Register">
+      <UniqueIdentifier>{107dfc3b-60b9-4302-987f-37241d833996}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
