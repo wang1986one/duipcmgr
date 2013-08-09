@@ -3,7 +3,7 @@
 using namespace Utils;
 
 class CMainWnd
-	: public WindowImplBase
+	: public WindowImplBase ,IListCallbackUI
 {
 public:
 	CMainWnd(void);
@@ -28,10 +28,16 @@ private:
 	// UI事件处理
 	virtual void Notify( TNotifyUI &msg );
 	virtual void OnClick(TNotifyUI &msg);
+
+	LPCTSTR GetItemText(CControlUI* pList, int iItem, int iSubItem);
+
+	int EnumSoftware();
 private:
 	// 窗口控制按钮
 	CButtonUI* m_btnClose;
 	CButtonUI* m_btnMin;
 	CButtonUI* m_btnMax;
 	CButtonUI* m_btnRestore;
+
+	CListUI* m_listSoftware;
 };

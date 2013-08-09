@@ -4,12 +4,14 @@
 #include <ShellAPI.h>
 #include "Utils/File/FileUtil.h"
 #include "Utils/System/Vista.h"
+#include "Core/softwaremanager.h"
 
 CMainWnd::CMainWnd(void)
 : m_btnClose(NULL)
 , m_btnMin(NULL)
 , m_btnMax(NULL)
 , m_btnRestore(NULL)
+, m_listSoftware(NULL)
 {
 }
 
@@ -48,6 +50,61 @@ void CMainWnd::InitWindow()
 	m_btnMin		= static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("minbtn")));
 	m_btnMax		= static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("maxbtn")));
 	m_btnRestore	= static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("restorebtn")));
+
+
+	m_listSoftware	= static_cast<CListUI*>(m_PaintManager.FindControl(_T("Softwarelist")));
+	//m_listSoftware->SetTextCallback(this);
+
+	CSoftwareManager manager;
+	DWORD count = manager.EnumSoftware();
+	CString strSize;
+	for(int i = 0; i < count; i++)
+	{
+		PSoftwareInfo pInfo = (PSoftwareInfo)manager.GetSoftwareInfoAt(i);
+
+		if(pInfo->dwSystemComponent == 1)
+			continue;
+		CListTextElementUI * pItem = new CListTextElementUI;
+		
+		
+		m_listSoftware->Add(pItem);
+
+		double fSize = 0 ;
+		if(pInfo->dwSize != 0)
+		{
+			fSize = pInfo->dwSize;
+		}
+		else if(pInfo->dwEstimatedSize != 0)
+		{
+			fSize = pInfo->dwEstimatedSize;
+		}
+		else if(pInfo->szSize != 0)
+		{
+			fSize = pInfo->szSize;
+		}
+
+		if(fSize <= 0)
+		{
+			strSize.Empty();
+		}
+		else if(fSize < 1024*1024)
+		{
+			fSize = fSize / 1024;
+			strSize.Format(_T("%.2f MB"), fSize);
+		}
+		else if(fSize < 1024*1024*1024)
+		{
+			fSize = fSize / 1024/1024;
+			strSize.Format(_T("%.2f GB"), fSize);
+		}
+				
+		pItem->SetAttribute(_T("textpadding"),_T("6"));
+		pItem->SetText(0, pInfo->strDisplayName);
+		pItem->SetText(1, strSize);
+		pItem->SetText(2, pInfo->strInstallDate);
+		
+		
+	}
 }
 
 void CMainWnd::OnFinalMessage( HWND hWnd )
@@ -170,3 +227,8 @@ LRESULT CMainWnd::OnSize( UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandle
 	return WindowImplBase::OnSize(uMsg,wParam,lParam,bHandled);
 }
 
+LPCTSTR CMainWnd::GetItemText(CControlUI* pList, int iItem, int iSubItem)
+{
+
+	return _T("");
+}
