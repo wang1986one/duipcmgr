@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="990,446">
+    <HorizontalLayout>
+        <Text text="弹幕播放" float="true" pos="335,180,0,0" width="265" height="120" relativepos="50,50,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="2" align="wrap" />
+    </HorizontalLayout>
+</Window>

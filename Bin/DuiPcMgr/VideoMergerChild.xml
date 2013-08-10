@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="990,446">
+    <VerticalLayout>
+                    <Control />
+                    <HorizontalLayout bordersize="1" bordercolor="#00DBEFFD">
+                        <Control />
+                        <Text text="视频合并12345" bordersize="4" bordercolor="#00DBEFFD" minwidth="100" minheight="60" textpadding="2,0,2,0" font="2" align="wrap" />
+                        <Control />
+                    </HorizontalLayout>
+                    <Control />
+                </VerticalLayout>
+</Window>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!-- 谨以此，向VS2008表达不满情绪。 -->
+<Window size="980,640" caption="0,0,0,90" roundcorner="0,0" >
+  <Font name="微软雅黑" size="13" bold="false" italic="false" default="true" />
+  <Font name="微软雅黑" size="12" bold="true" italic="false" />
+  <Font name="微软雅黑" size="42" bold="true" italic="false" />
+  <Font name="微软雅黑" size="16" bold="true" italic="false" />
+  <Include source="scrollbar.xml" />
+  <Default name="Button" value="normalimage=&quot;file='Common\TabLayoutbtn.png' corner='2,2,2,2'&quot; hotimage=&quot;file='Common\TabLayoutbtn_h.png'&quot; pushedimage=&quot;file='Common\TabLayoutbtn_p.png'&quot;" />
+  <Default name="VScrollBar" value="button1normalimage=&quot;file='Common\scrollbar_v.png' source='0,0,16,16'&quot; button1hotimage=&quot;file='Common\scrollbar_v.png' source='16,0,32,16,16'&quot; button1pushedimage=&quot;file='Common\scrollbar_v.png' source='32,0,48,16'&quot; button2normalimage=&quot;file='Common\scrollbar_v.png' source='0,32,16,48'&quot; button2hotimage=&quot;file='Common\scrollbar_v.png' source='16,32,32,48'&quot; button2pushedimage=&quot;file='Common\scrollbar_v.png' source='32,32,48,48'&quot; thumbnormalimage=&quot;file='Common\scrollbar_v.png' source='0,48,16,64' corner='0,2,0,2'&quot; thumbhotimage=&quot;file='Common\scrollbar_v.png' source='16,48,32,64' corner='0,2,0,2'&quot; thumbpushedimage=&quot;file='Common\scrollbar_v.png' source='32,48,48,64' corner='0,2,0,2'&quot; bknormalimage=&quot;file='Common\scrollbar_v.png' source='0,16,16,32'&quot;" />
+  <Default name="Combo" value="normalimage=&quot;file='Common\combo.png' source='0,0,100,22' corner='2,2,20,2'&quot; hotimage=&quot;file='Common\combo.png' source='0,22,100,44' corner='2,2,22,2'&quot; pushedimage=&quot;file='Common\combo.png' source='0,44,100,66' corner='2,2,22,2'&quot;" />
+  <Default name="Option" value="normalimage=&quot;file='Common\TabLayoutbtn.png'&quot; hotimage=&quot;file='Common\TabLayoutbtn_h.png'&quot; pushedimage=&quot;file='Common\TabLayoutbtn_p.png'&quot; selectedimage=&quot;file='Common\TabLayoutbtn_p.png'&quot;" />
+  <VerticalLayout name="MainWnd" bkcolor="#FF242424">
+    <HorizontalLayout name="Header" height="145" bkimage="file='Common\mainFramHeader1.png' corner='0,61,920,0' " bordercolor="#FF242424" bordersize="2,2,2,0">
+      <VerticalLayout width="714" height="145" >
+        <!-- LOGO -->
+        <ChildLayout xmlfile="MgrLOGO.xml" width="207" height="56" padding="20,20,0,0" />
+        <!-- 核心功能按钮，控制切换功能视图 -->
+        <ChildLayout xmlfile="FunctionChild.xml" padding="1,25,0,0" height="45"/>
+
+      </VerticalLayout>
+      <!-- 最大化最小化等控制按钮 -->
+      <VerticalLayout>
+        <HorizontalLayout bordercolor="#FF0000FF" inset="0,0,0,0">
+          <HorizontalLayout bordercolor="#FF0000FF" >
+            <Control />
+            <Button name="Setting"   tooltip="设置"   width="30" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='Common\setting.png' source='0,0,30,20' " hotimage="file='Common\setting.png' source='31,0,61,20' " pushedimage="file='Common\setting.png' source='62,0,92,20' " padding="0,1,0,0" />
+            <Button name="minbtn"    tooltip="最小化" width="30" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='Common\minimize.png' source='0,0,30,20'" hotimage="file='Common\minimize.png' source='30,0,60,20'" pushedimage="file='Common\minimize.png' source='60,0,90,20'" />
+            <!--<Button name="maxbtn"     tooltip="最大化" width="25" height="18" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='Common\maximize.png'" hotimage="file='Common\maximize_h.png'" pushedimage="file='Common\maximize_h.png'" />-->
+            <!--<Button name="restorebtn" tooltip="恢复"  width="25" height="18" visible="false" align="center" normalimage="file='Common\restore.png'" hotimage="file='Common\restore_h.png'" pushedimage="file='Common\restore_p.png'" />-->
+            <Button name="closebtn"  tooltip="关闭"   width="40" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='Common\close.png' source='2,0,40,20' " hotimage="file='Common\close.png' source='42,0,80,20' " pushedimage="file='Common\close.png' source='82,0,120,20'"/>
+          </HorizontalLayout>
+        </HorizontalLayout>
+        <Control bordercolor="#FF0000FF" />
+      </VerticalLayout>
+    </HorizontalLayout>
+    <!-- 内容区,基于视图页面拆分保存 -->
+    <HorizontalLayout name="Content" padding="1,0,1,0" bordercolor="#FF0000FF">
+      <TabLayout name="TabContentLayout" >
+        <ChildLayout xmlfile="SoftwareChild.xml" />
+        <ChildLayout xmlfile="HomeChild.xml" />
+        <ChildLayout xmlfile="HardwareChild.xml" />
+        
+        <!--<ChildLayout xmlfile="MessageBoardChild.xml" />
+        <ChildLayout xmlfile="DemoSiteChild.xml" />
+        <ChildLayout xmlfile="Test1Child.xml" />
+        <ChildLayout xmlfile="Test2Child.xml" />
+        <ChildLayout xmlfile="Test3Child.xml" />-->
+      </TabLayout>
+    </HorizontalLayout>
+    <!-- Footer 显示一些版本状态信息，部分项目不需要 -->
+    <HorizontalLayout name="Footer" height="28" bkcolor="#FF242424" inset="1,0,1,1">
+      <HorizontalLayout bkcolor="#FFDBEFFD" >
+        <Text text="{c #386382}版本:{/c}" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="vcenter" padding="5,0,0,0" />
+        <Text text="{c #386382}1.0.1024.256{/c}" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="vcenter" />
+      </HorizontalLayout>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>
