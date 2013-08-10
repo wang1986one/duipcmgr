@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{ed7c6fe2-77a9-42a2-8ba0-85a99fbf0de5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{35c2cfa6-b2cf-4261-9b50-28d65f4d93b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\System">
+      <UniqueIdentifier>{271a6e80-2730-4edb-98be-2f0b7bf314ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Path">
+      <UniqueIdentifier>{49325278-f186-4b97-a79a-f06bc432fa07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Network">
+      <UniqueIdentifier>{2ab5c8e4-c978-4291-b1f8-b31522e3d378}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Thread">
+      <UniqueIdentifier>{ba73066c-9409-4cfc-8c40-b850c92b1b00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\File">
+      <UniqueIdentifier>{12ee4ec9-4675-4508-8b02-eb9d0a78acc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Window">
+      <UniqueIdentifier>{2b33da34-840a-4de2-89a8-6d68586536a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Parser">
+      <UniqueIdentifier>{a317f387-fce3-41e5-911c-5c0c71cc7192}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Crypt">
+      <UniqueIdentifier>{bf63ee6a-77ff-4e34-b4f0-d6c31194759f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Hash">
+      <UniqueIdentifier>{43f6ff47-219e-46e8-b2f3-c638df950ecf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Register">
+      <UniqueIdentifier>{fb62c3b3-ccba-4eb4-9c55-ea02c031bba4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TinyXML">
+      <UniqueIdentifier>{afdc477c-aa41-4b75-9fa1-e622de8cc605}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSON">
+      <UniqueIdentifier>{53e6a75a-c5fa-4e20-9f17-0a99f4e193fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQLite">
+      <UniqueIdentifier>{b2ed160a-e2ad-4ce7-9f20-3dd332842760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{a3d9c5df-b20d-4af5-a5d1-aa293f219dc9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\DuiPcMgr\DuiPcMgr.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\DuiPcMgr\Res\MainIcon.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\DuiPcMgr\Res\skin.zip">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\DuiPcMgr\UI\MainWnd.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\Log4cplus.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\MemBuffer.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\StringUtil.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\Utils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\System\Kernel32Mod.cpp">
+      <Filter>Utils\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\System\NTHelper.cpp">
+      <Filter>Utils\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\System\ProcessMgr.cpp">
+      <Filter>Utils\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\System\SystemInfo.cpp">
+      <Filter>Utils\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\System\Vista.cpp">
+      <Filter>Utils\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\System\WinWow64.cpp">
+      <Filter>Utils\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\Path\WinPath.cpp">
+      <Filter>Utils\Path</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\Thread\ThreadPool.cpp">
+      <Filter>Utils\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\Thread\ThreadUtil.cpp">
+      <Filter>Utils\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\Thread\WinRunnable.cpp">
+      <Filter>Utils\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\Thread\WinThread.cpp">
+      <Filter>Utils\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\File\FileStream.cpp">
+      <Filter>Utils\File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\File\FileUtil.cpp">
+      <Filter>Utils\File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\File\FileVersion.cpp">
+      <Filter>Utils\File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\File\FileVersionInfo.cpp">
+      <Filter>Utils\File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\Window\TrayIcon.cpp">
+      <Filter>Utils\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\Crypt\TEACrypt.cpp">
+      <Filter>Utils\Crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\Hash\crc32.c">
+      <Filter>Utils\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\Hash\MD5.cpp">
+      <Filter>Utils\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\Register\RegistryKey.cpp">
+      <Filter>Utils\Register</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\TinyXml\tinystr.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\TinyXml\tinyxml.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\TinyXml\tinyxmlerror.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\TinyXml\tinyxmlparser.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\JSON\json_reader.cpp">
+      <Filter>JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\JSON\json_value.cpp">
+      <Filter>JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\JSON\json_writer.cpp">
+      <Filter>JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\SQLite\CppSQLite3U.cpp">
+      <Filter>SQLite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\SQLite\sqlite3.c">
+      <Filter>SQLite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Core\SoftwareManager.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\main.cpp" />
+    <ClCompile Include="..\DuiPcMgr\stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\DuiPcMgr\UI\MainWnd.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\Delegate.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\DelegateTemplate.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\Log4cplus.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\MemBuffer.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\StringUtil.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\Utils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\System\Kernel32Mod.h">
+      <Filter>Utils\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\System\NTHelper.h">
+      <Filter>Utils\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\System\ProcessMgr.h">
+      <Filter>Utils\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\System\SystemInfo.h">
+      <Filter>Utils\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\System\Vista.h">
+      <Filter>Utils\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\System\WinModule.h">
+      <Filter>Utils\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\System\WinWow64.h">
+      <Filter>Utils\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\Path\WinPath.h">
+      <Filter>Utils\Path</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\Network\WinHttpDef.h">
+      <Filter>Utils\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\Thread\ThreadPool.h">
+      <Filter>Utils\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\Thread\ThreadUtil.h">
+      <Filter>Utils\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\Thread\WinRunnable.h">
+      <Filter>Utils\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\Thread\WinThread.h">
+      <Filter>Utils\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\File\FileStream.h">
+      <Filter>Utils\File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\File\FileUtil.h">
+      <Filter>Utils\File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\File\FileVersion.h">
+      <Filter>Utils\File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\File\FileVersionInfo.h">
+      <Filter>Utils\File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\Window\TrayIcon.h">
+      <Filter>Utils\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\Crypt\TEACrypt.h">
+      <Filter>Utils\Crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\Hash\crc32.h">
+      <Filter>Utils\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\Hash\MD5.h">
+      <Filter>Utils\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\Register\RegistryKey.h">
+      <Filter>Utils\Register</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Utils\Register\RegKeyConvertString.h">
+      <Filter>Utils\Register</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\TinyXml\tinystr.h">
+      <Filter>TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\TinyXml\tinyxml.h">
+      <Filter>TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\JSON\autolink.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\JSON\config.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\JSON\features.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\JSON\forwards.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\JSON\json.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\JSON\json_batchallocator.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\JSON\reader.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\JSON\value.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\JSON\writer.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\SQLite\CppSQLite3U.h">
+      <Filter>SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\SQLite\sqlite3.h">
+      <Filter>SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\SQLite\sqlite3ext.h">
+      <Filter>SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\Core\SoftwareManager.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiPcMgr\resource.h" />
+    <ClInclude Include="..\DuiPcMgr\stdafx.h" />
+  </ItemGroup>
+</Project>

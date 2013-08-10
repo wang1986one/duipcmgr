@@ -1,5 +1,5 @@
 #pragma once
-#include "DuiLib/Utils/WinImplBase.h"
+#include "../DuiLib/Utils/WinImplBase.h"
 using namespace Utils;
 
 class CMainWnd

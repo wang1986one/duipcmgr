@@ -22,7 +22,7 @@ CMainWnd::~CMainWnd(void)
 
 LPCTSTR CMainWnd::GetSkinFolder()
 {
-	return _T("Skin\\");
+	return _T("DuiPcMgr\\");
 }
 
 LPCTSTR CMainWnd::GetSkinFile()
@@ -160,7 +160,7 @@ LPCTSTR CMainWnd::GetResID() const
 
 LPCTSTR CMainWnd::GetResType() const
 {
-	return _T("00001");
+	return _T("MGR001");
 }
 
 LRESULT CMainWnd::HandleCustomMessage( UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled )

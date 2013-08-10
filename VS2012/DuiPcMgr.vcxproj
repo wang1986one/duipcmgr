@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="UnicodeDebug|Win32">
+      <Configuration>UnicodeDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnicodeRelease|Win32">
+      <Configuration>UnicodeRelease</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CBA5CA22-8F0A-4989-85E1-8233754118CA}</ProjectGuid>
+    <RootNamespace>DuiPcMgr</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <UseOfAtl>false</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <UseOfAtl>false</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+    <OutDir>$(ProjectDir)..\Bin\</OutDir>
+    <IntDir>$(SolutionDir)$(ProjectName)\Build\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+    <OutDir>$(ProjectDir)..\Bin\</OutDir>
+    <IntDir>$(SolutionDir)$(ProjectName)\Build\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\$(ProjectName)\;$(SolutionDir)..\log4cplus\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_RAND_S;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName)_d.exe</OutputFile>
+      <AdditionalLibraryDirectories>Lib;$(SolutionDir)..\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\$(ProjectName)\;$(SolutionDir)..\log4cplus\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;UILIB_STATIC;_CRT_RAND_S;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>Lib;$(SolutionDir)..\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\DuiPcMgr\DuiPcMgr.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\DuiPcMgr\Res\MainIcon.ico" />
+    <None Include="..\DuiPcMgr\Res\skin.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\DuiPcMgr\UI\MainWnd.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\Log4cplus.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\MemBuffer.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\StringUtil.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\Utils.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\System\Kernel32Mod.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\System\NTHelper.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\System\ProcessMgr.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\System\SystemInfo.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\System\Vista.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\System\WinWow64.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\Path\WinPath.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\Thread\ThreadPool.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\Thread\ThreadUtil.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\Thread\WinRunnable.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\Thread\WinThread.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\File\FileStream.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\File\FileUtil.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\File\FileVersion.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\File\FileVersionInfo.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\Window\TrayIcon.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\Crypt\TEACrypt.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\Hash\crc32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Utils\Hash\MD5.cpp" />
+    <ClCompile Include="..\DuiPcMgr\Utils\Register\RegistryKey.cpp" />
+    <ClCompile Include="..\DuiPcMgr\TinyXml\tinystr.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\TinyXml\tinyxml.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\TinyXml\tinyxmlerror.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\TinyXml\tinyxmlparser.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\JSON\json_reader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\JSON\json_value.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\JSON\json_writer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\SQLite\CppSQLite3U.cpp" />
+    <ClCompile Include="..\DuiPcMgr\SQLite\sqlite3.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\Core\SoftwareManager.cpp" />
+    <ClCompile Include="..\DuiPcMgr\main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\DuiPcMgr\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\DuiPcMgr\UI\MainWnd.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\Delegate.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\DelegateTemplate.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\Log4cplus.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\MemBuffer.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\StringUtil.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\Utils.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\System\Kernel32Mod.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\System\NTHelper.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\System\ProcessMgr.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\System\SystemInfo.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\System\Vista.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\System\WinModule.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\System\WinWow64.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\Path\WinPath.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\Network\WinHttpDef.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\Thread\ThreadPool.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\Thread\ThreadUtil.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\Thread\WinRunnable.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\Thread\WinThread.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\File\FileStream.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\File\FileUtil.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\File\FileVersion.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\File\FileVersionInfo.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\Window\TrayIcon.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\Crypt\TEACrypt.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\Hash\crc32.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\Hash\MD5.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\Register\RegistryKey.h" />
+    <ClInclude Include="..\DuiPcMgr\Utils\Register\RegKeyConvertString.h" />
+    <ClInclude Include="..\DuiPcMgr\TinyXml\tinystr.h" />
+    <ClInclude Include="..\DuiPcMgr\TinyXml\tinyxml.h" />
+    <ClInclude Include="..\DuiPcMgr\JSON\autolink.h" />
+    <ClInclude Include="..\DuiPcMgr\JSON\config.h" />
+    <ClInclude Include="..\DuiPcMgr\JSON\features.h" />
+    <ClInclude Include="..\DuiPcMgr\JSON\forwards.h" />
+    <ClInclude Include="..\DuiPcMgr\JSON\json.h" />
+    <ClInclude Include="..\DuiPcMgr\JSON\json_batchallocator.h" />
+    <ClInclude Include="..\DuiPcMgr\JSON\reader.h" />
+    <ClInclude Include="..\DuiPcMgr\JSON\value.h" />
+    <ClInclude Include="..\DuiPcMgr\JSON\writer.h" />
+    <ClInclude Include="..\DuiPcMgr\SQLite\CppSQLite3U.h" />
+    <ClInclude Include="..\DuiPcMgr\SQLite\sqlite3.h" />
+    <ClInclude Include="..\DuiPcMgr\SQLite\sqlite3ext.h" />
+    <ClInclude Include="..\DuiPcMgr\Core\SoftwareManager.h" />
+    <ClInclude Include="..\DuiPcMgr\resource.h" />
+    <ClInclude Include="..\DuiPcMgr\stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="DuiLib.vcxproj">
+      <Project>{e106acd7-4e53-4aee-942b-d0dd426db34e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
