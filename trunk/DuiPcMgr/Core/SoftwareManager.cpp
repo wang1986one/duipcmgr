@@ -34,11 +34,12 @@ DWORD CSoftwareManager::EnumSoftware()
 			
 			subkey = reg.EnumKey(dwIndex++);
 			//_TRACE(_T("%s\n"),subkey);
-	
+
 			CString strValue;
 			DWORD dwValue = 0;
 			if(subreg.Open(subkey))
 			{
+				info.strKey = subkey;
 				if(!subreg.Read(_T("Comments"), &info.strComments))
 				{
 					info.strComments.Empty();
@@ -55,6 +56,7 @@ DWORD CSoftwareManager::EnumSoftware()
 				{
 					info.strDisplayName.Empty();
 				}
+				
 				if(!subreg.Read(_T("DisplayVersion"), &info.strDisplayVersion))
 				{
 					info.strDisplayVersion.Empty();
@@ -70,8 +72,32 @@ DWORD CSoftwareManager::EnumSoftware()
 				if(!subreg.Read(_T("InstallDate"), &info.strInstallDate))
 				{
 					info.strInstallDate.Empty();
+
+					memset(&info.installData,0,sizeof(tm));
 				}else
 				{
+					TRACE(_T("InstallDate：%s\n\n"),info.strInstallDate);
+					int iStart = 0;
+					CString strDate[6];		// 月日年时分秒
+					int i = 0;
+					do
+					{
+						strDate[i] = info.strInstallDate.Tokenize(_T("/ :"),iStart);
+
+						if(iStart == info.strInstallDate.GetLength()+1)
+						{
+							strDate[0] = info.strInstallDate.Left(4);
+							strDate[1] = info.strInstallDate.Mid(4,2);
+							strDate[2] = info.strInstallDate.Right(2);
+							break;
+						}
+					}while(!strDate[i++].IsEmpty());
+
+					info.installData.tm_year = _ttoi(strDate[0]) - 1900;
+					info.installData.tm_mon = _ttoi(strDate[1]) - 1;
+					info.installData.tm_mday = _ttoi(strDate[2]) ;
+
+
 					//info.strInstallDate
 				}
 				if(!subreg.Read(_T("InstallLocation"), &info.strInstallLocation))
@@ -86,6 +112,11 @@ DWORD CSoftwareManager::EnumSoftware()
 				{
 					info.strUninstallString.Empty();
 				}
+				if(!subreg.Read(_T("QuietUninstallString"), &info.strQuietUninstallString))
+				{
+					info.strQuietUninstallString.Empty();
+				}
+				
 				if(!subreg.Read(_T("Publisher"), &info.strPublisher))
 				{
 					info.strPublisher.Empty();
@@ -111,9 +142,8 @@ DWORD CSoftwareManager::EnumSoftware()
 					info.szSize = 0;
 				}
 				
-				
-
 				m_softList.push_back(info);
+				
 			}
 			subreg.Close();
 		}while (!subkey.IsEmpty());
