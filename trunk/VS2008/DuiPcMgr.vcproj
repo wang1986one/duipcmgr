@@ -183,6 +183,7 @@
 	<References>
 		<ProjectReference
 			ReferencedProjectIdentifier="{BEC0CD2F-60CD-40E2-A89B-AB10E902F1D5}"
+			RelativePathToProject=".\log4cplus_static.vcproj"
 		/>
 	</References>
 	<Files>
@@ -729,6 +730,10 @@
 			</File>
 			<File
 				RelativePath="..\DuiPcMgr\Core\SoftwareManager.h"
+				>
+			</File>
+			<File
+				RelativePath="..\DuiPcMgr\Core\UnInstallSoftware.h"
 				>
 			</File>
 		</Filter>
