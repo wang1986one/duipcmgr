@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+  <Default name="Menu" value="inset=&quot;2,2,2,2&quot; itemtextpadding=&quot;30,0,0,0&quot; bkimage=&quot;file='Common\menu_bk3.png' corner='30,8,8,8'&quot; hole=&quot;false&quot; itemselectedtextcolor=&quot;#FFFFFFFF&quot; itemselectedimage=&quot;menu_selected.png&quot;" />
+  <Menu>
+    <MenuElement name="Menu_Copy" text=" 测试(&amp;A) " />
+    <MenuElement name="Menu_SelAll" text=" 测试(&amp;A) " />
+    <MenuElement text="" height="3" enabled="false">
+      <HorizontalLayout>
+        <Label width="26"/>
+        <Label bkimage="file='Common\menu_arrow.png'"/>
+        <Label width="8"/>
+      </HorizontalLayout>
+    </MenuElement>
+    <MenuElement text=" 透明度 " >
+      <HorizontalLayout>
+        <Label />
+        <Label width="20"  bkimage="file='Common\tree_expand.png' source='0,0,16,16' dest='0,5,15,20'"/>
+      </HorizontalLayout>
+      <MenuElement name="Menu_ZoomRatio_400" text=" 400% " checkimg="file='Common\menu_check.png' dest='4,4,20,20'" />
+      <MenuElement name="Menu_ZoomRatio_200" text=" 75% " checkimg="file='Common\menu_check.png' dest='4,4,20,20'" />
+      <MenuElement name="Menu_ZoomRatio_150" text=" 60% " checkimg="file='Common\menu_check.png' dest='4,4,20,20'" />
+      <MenuElement name="Menu_ZoomRatio_125" text=" 45% " checkimg="file='Common\menu_check.png' dest='4,4,20,20'" />
+      <MenuElement name="Menu_ZoomRatio_100" text=" 100% " checkimg="file='Common\menu_check.png' dest='4,4,20,20'" />
+      <MenuElement name="Menu_ZoomRatio_75" text=" 15% " checkimg="file='Common\menu_check.png' dest='4,4,20,20'" />
+      <MenuElement name="Menu_ZoomRatio_50" text=" 10% " checkimg="file='Common\menu_check.png' dest='4,4,20,20'" />
+    </MenuElement>
+    <MenuElement name="Menu_SaveAs" text=" 显示窗口(&amp;X)... " />
+    <MenuElement text="" height="3" enabled="false">
+      <HorizontalLayout>
+        <Label width="26"/>
+        <Label bkimage="file='Common\menu_arrow.png'"/>
+        <Label width="8"/>
+      </HorizontalLayout>
+    </MenuElement>
+    <MenuElement name="Menu_Clear" text=" 退出(&amp;E) " />
+  </Menu>
+</Window>
