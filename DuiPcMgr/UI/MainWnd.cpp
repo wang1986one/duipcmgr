@@ -12,6 +12,7 @@ CMainWnd::CMainWnd(void)
 , m_btnMax(NULL)
 , m_btnRestore(NULL)
 , m_listSoftware(NULL)
+,m_softwareCount(NULL)
 {
 }
 
@@ -53,8 +54,11 @@ void CMainWnd::InitWindow()
 
 
 	m_listSoftware	= static_cast<CListUI*>(m_PaintManager.FindControl(_T("Softwarelist")));
+
+	m_softwareCount = static_cast<CLabelUI*>(m_PaintManager.FindControl(_T("SoftwareCount")));
 	//m_listSoftware->SetTextCallback(this);
 
+	DWORD dwSoftwareCount = 0;
 	CSoftwareManager manager;
 	DWORD count = manager.EnumSoftware();
 	CString strSize;
@@ -62,11 +66,12 @@ void CMainWnd::InitWindow()
 	{
 		PSoftwareInfo pInfo = (PSoftwareInfo)manager.GetSoftwareInfoAt(i);
 
-		if(pInfo->dwSystemComponent == 1)
+		if(pInfo->dwSystemComponent == 1 ||
+			pInfo->strDisplayName.IsEmpty())
 			continue;
 		CListTextElementUI * pItem = new CListTextElementUI;
 		
-		
+		dwSoftwareCount++;
 		m_listSoftware->Add(pItem);
 
 		double fSize = 0 ;
@@ -87,6 +92,10 @@ void CMainWnd::InitWindow()
 		{
 			strSize.Empty();
 		}
+		else if(fSize < 1024)
+		{
+			strSize.Format(_T("%.2f KB"), fSize);
+		}
 		else if(fSize < 1024*1024)
 		{
 			fSize = fSize / 1024;
@@ -98,13 +107,21 @@ void CMainWnd::InitWindow()
 			strSize.Format(_T("%.2f GB"), fSize);
 		}
 				
-		pItem->SetAttribute(_T("textpadding"),_T("6"));
 		pItem->SetText(0, pInfo->strDisplayName);
 		pItem->SetText(1, strSize);
-		pItem->SetText(2, pInfo->strInstallDate);
+
+		if(pInfo->installData.tm_year != 0)
+		{
+			strSize.Format(_T("%d/%d/%d"),pInfo->installData.tm_year+1900, pInfo->installData.tm_mon+1,pInfo->installData.tm_mday);
+			pItem->SetText(2, strSize );
+		}
+		//pItem->SetText(2, pInfo->strInstallDate);
 		
 		
 	}
+	
+	strSize.Format(_T("%d"), dwSoftwareCount);
+	m_softwareCount->SetText( strSize);		
 }
 
 void CMainWnd::OnFinalMessage( HWND hWnd )

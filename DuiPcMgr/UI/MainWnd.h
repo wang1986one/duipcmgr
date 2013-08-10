@@ -40,4 +40,6 @@ private:
 	CButtonUI* m_btnRestore;
 
 	CListUI* m_listSoftware;
+
+	CLabelUI * m_softwareCount;
 };
