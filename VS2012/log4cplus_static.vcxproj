@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="UnicodeDebug|Win32">
+      <Configuration>UnicodeDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnicodeRelease|Win32">
+      <Configuration>UnicodeRelease</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BEC0CD2F-60CD-40E2-A89B-AB10E902F1D5}</ProjectGuid>
+    <RootNamespace>log4cplus_static</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+    <OutDir>$(SolutionDir)Lib\</OutDir>
+    <IntDir>$(SolutionDir)$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>log4cplusUSD</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+    <OutDir>$(SolutionDir)Lib\</OutDir>
+    <IntDir>$(SolutionDir)$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>log4cplusUS</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\log4cplus\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_USRDLL;WIN32;_LIB;_WINDOWS;LOG4CPLUS_STATIC;INSIDE_LOG4CPLUS;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(IntDir)log4cplus_static.pch</PrecompiledHeaderOutputFile>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)log4cplusUSD.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(IntDir)$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\log4cplus\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_LIB;_WINDOWS;LOG4CPLUS_STATIC;INSIDE_LOG4CPLUS;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)log4cplusUS.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(IntDir)$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\log4cplus\src\appender.cxx" />
+    <ClCompile Include="..\log4cplus\src\appenderattachableimpl.cxx" />
+    <ClCompile Include="..\log4cplus\src\asyncappender.cxx" />
+    <ClCompile Include="..\log4cplus\src\clfsappender.cxx" />
+    <ClCompile Include="..\log4cplus\src\clogger.cxx" />
+    <ClCompile Include="..\log4cplus\src\configurator.cxx" />
+    <ClCompile Include="..\log4cplus\src\consoleappender.cxx" />
+    <ClCompile Include="..\log4cplus\src\cygwin-win32.cxx" />
+    <ClCompile Include="..\log4cplus\src\env.cxx" />
+    <ClCompile Include="..\log4cplus\src\factory.cxx" />
+    <ClCompile Include="..\log4cplus\src\fileappender.cxx" />
+    <ClCompile Include="..\log4cplus\src\fileinfo.cxx" />
+    <ClCompile Include="..\log4cplus\src\filter.cxx" />
+    <ClCompile Include="..\log4cplus\src\global-init.cxx" />
+    <ClCompile Include="..\log4cplus\src\hierarchy.cxx" />
+    <ClCompile Include="..\log4cplus\src\hierarchylocker.cxx" />
+    <ClCompile Include="..\log4cplus\src\layout.cxx" />
+    <ClCompile Include="..\log4cplus\src\lockfile.cxx" />
+    <ClCompile Include="..\log4cplus\src\log4judpappender.cxx" />
+    <ClCompile Include="..\log4cplus\src\logger.cxx" />
+    <ClCompile Include="..\log4cplus\src\loggerimpl.cxx" />
+    <ClCompile Include="..\log4cplus\src\loggingevent.cxx" />
+    <ClCompile Include="..\log4cplus\src\loggingmacros.cxx" />
+    <ClCompile Include="..\log4cplus\src\loglevel.cxx" />
+    <ClCompile Include="..\log4cplus\src\loglog.cxx" />
+    <ClCompile Include="..\log4cplus\src\logloguser.cxx" />
+    <ClCompile Include="..\log4cplus\src\mdc.cxx" />
+    <ClCompile Include="..\log4cplus\src\ndc.cxx" />
+    <ClCompile Include="..\log4cplus\src\nteventlogappender.cxx" />
+    <ClCompile Include="..\log4cplus\src\nullappender.cxx" />
+    <ClCompile Include="..\log4cplus\src\objectregistry.cxx" />
+    <ClCompile Include="..\log4cplus\src\patternlayout.cxx" />
+    <ClCompile Include="..\log4cplus\src\pointer.cxx" />
+    <ClCompile Include="..\log4cplus\src\property.cxx" />
+    <ClCompile Include="..\log4cplus\src\queue.cxx" />
+    <ClCompile Include="..\log4cplus\src\rootlogger.cxx" />
+    <ClCompile Include="..\log4cplus\src\sleep.cxx" />
+    <ClCompile Include="..\log4cplus\src\snprintf.cxx" />
+    <ClCompile Include="..\log4cplus\src\socket-unix.cxx" />
+    <ClCompile Include="..\log4cplus\src\socket-win32.cxx" />
+    <ClCompile Include="..\log4cplus\src\socket.cxx" />
+    <ClCompile Include="..\log4cplus\src\socketappender.cxx" />
+    <ClCompile Include="..\log4cplus\src\socketbuffer.cxx" />
+    <ClCompile Include="..\log4cplus\src\stringhelper-clocale.cxx" />
+    <ClCompile Include="..\log4cplus\src\stringhelper-cxxlocale.cxx" />
+    <ClCompile Include="..\log4cplus\src\stringhelper-iconv.cxx" />
+    <ClCompile Include="..\log4cplus\src\stringhelper.cxx" />
+    <ClCompile Include="..\log4cplus\src\syncprims.cxx" />
+    <ClCompile Include="..\log4cplus\src\syslogappender.cxx" />
+    <ClCompile Include="..\log4cplus\src\threads.cxx" />
+    <ClCompile Include="..\log4cplus\src\timehelper.cxx" />
+    <ClCompile Include="..\log4cplus\src\tls.cxx" />
+    <ClCompile Include="..\log4cplus\src\version.cxx" />
+    <ClCompile Include="..\log4cplus\src\win32consoleappender.cxx" />
+    <ClCompile Include="..\log4cplus\src\win32debugappender.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\log4cplus\include\log4cplus\appender.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\asyncappender.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\clfsappender.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\clogger.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\config.hxx" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\configurator.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\consoleappender.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\fileappender.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\fstreams.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\hierarchy.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\hierarchylocker.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\layout.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\log4judpappender.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\logger.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\loggingmacros.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\loglevel.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\mdc.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\ndc.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\nteventlogappender.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\nullappender.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\qt4debugappender.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\socketappender.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\streams.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\syslogappender.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\tchar.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\tracelogger.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\tstring.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\version.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\win32consoleappender.h" />
+    <ClInclude Include="..\log4cplus\include\log4cplus\win32debugappender.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
