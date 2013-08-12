@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="800,446">
+    <VerticalLayout>
+        <HorizontalLayout bordersize="1" bordercolor="#FFFFFFFF">
+            <VerticalLayout>
+                <Control height="10" bkcolor="#FFFFFFFF" />
+                <HorizontalLayout height="30">
+                    <Text text="解包RDB文件" padding="5,0,0,0" bkcolor="#FFFFFFFF" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="3" align="wrap" />
+                    <Control bkcolor="#FFFFFFFF" />
+                </HorizontalLayout>
+                <HorizontalLayout height="90">
+                    <VerticalLayout>
+                        <HorizontalLayout name="ParserRdbFileLayout" height="40" padding="1,0,0,0" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD">
+                            <Text text="{c #386382}RDB  文件:         {/c}" padding="10,8,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                            <Edit name="RdbIn" bordersize="1" width="450" height="25" padding="0,6,0,0" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                            <Control width="15" height="40" />
+                            <Button name="RdbInBtn" text="浏 览..." bordersize="1" width="110" height="33" padding="0,3,0,0" bordercolor="#00DBEFFD" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="1" align="center" normalimage="file=&apos;Common\Btnres.png&apos; " hotimage="file=&apos;Common\Btnres_h.png&apos; " pushedimage="file=&apos;Common\Btnres_p.png&apos;" />
+                        </HorizontalLayout>
+                        <HorizontalLayout name="ParserRdbDocumentLayout" height="40" padding="1,0,0,0" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD">
+                            <Text text="{c #386382}输出至(目录):      {/c}" padding="10,8,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                            <Edit name="RdbOutFolder" bordersize="1" width="450" height="25" padding="0,6,0,0" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                            <Control width="15" height="40" />
+                            <Button name="RdbOutDocumentBtn" text="浏 览..." bordersize="1" width="110" height="33" padding="0,3,0,0" bordercolor="#00DBEFFD" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="1" align="center" normalimage="file=&apos;Common\Btnres.png&apos; " hotimage="file=&apos;Common\Btnres_h.png&apos; " pushedimage="file=&apos;Common\Btnres_p.png&apos;" />
+                        </HorizontalLayout>
+                    </VerticalLayout>
+                    <Button name="StartRdbParser" text="解包" bordersize="1" width="75" height="75" padding="0,3,0,0" bordercolor="#00DBEFFD" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="3" align="center" normalimage="file=&apos;Common\StartBtnres.png&apos; " hotimage="file=&apos;Common\StartBtnres_h.png&apos; " pushedimage="file=&apos;Common\StartBtnres_p.png&apos;" />
+                    <Control width="15" />
+                </HorizontalLayout>
+                <HorizontalLayout height="30">
+                    <Text text="打包RDB文件" padding="5,0,0,0" bkcolor="#FFFFFFFF" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="3" align="wrap" />
+                    <Control bkcolor="#FFFFFFFF" />
+                </HorizontalLayout>
+                <HorizontalLayout height="90">
+                    <VerticalLayout>
+                        <HorizontalLayout name="PackageRdbFileLayout" height="40" padding="1,0,0,0" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD">
+                            <Text text="{c #386382}打包文件夹:        {/c}" padding="10,8,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                            <Edit name="RdbFileIn" bordersize="1" width="450" height="25" padding="0,6,0,0" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                            <Control width="15" height="40" />
+                            <Button name="DocumentInBtn" text="浏 览..." bordersize="1" width="110" height="33" padding="0,3,0,0" bordercolor="#00DBEFFD" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="1" align="center" normalimage="file=&apos;Common\Btnres.png&apos; " hotimage="file=&apos;Common\Btnres_h.png&apos; " pushedimage="file=&apos;Common\Btnres_p.png&apos;" />
+                        </HorizontalLayout>
+                        <HorizontalLayout name="PackageRdbDocumentLayout" height="40" padding="1,0,0,0" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD">
+                            <Text text="{c #386382}打包至(文件):      {/c}" padding="10,8,0,0" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                            <Edit name="RdbFileOut" bordersize="1" width="450" height="25" padding="0,6,0,0" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                            <Control width="15" height="40" />
+                            <Button name="RdbOutBtn" text="浏 览..." bordersize="1" width="110" height="33" padding="0,3,0,0" bordercolor="#00DBEFFD" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="1" align="center" normalimage="file=&apos;Common\Btnres.png&apos; " hotimage="file=&apos;Common\Btnres_h.png&apos; " pushedimage="file=&apos;Common\Btnres_p.png&apos;" />
+                        </HorizontalLayout>
+                    </VerticalLayout>
+                    <Button name="StartRdbPackage" text="打包" bordersize="1" width="75" height="75" padding="0,3,0,0" bordercolor="#00DBEFFD" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="3" align="center" normalimage="file=&apos;Common\StartBtnres.png&apos; " hotimage="file=&apos;Common\StartBtnres_h.png&apos; " pushedimage="file=&apos;Common\StartBtnres_p.png&apos;" />
+                    <Control width="15" />
+                </HorizontalLayout>
+                <VerticalLayout name="SidebarLayoutCut" bordersize="1" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD">
+                    <VerticalLayout bordersize="1" bordercolor="#00DBEFFD">
+                        <Text text="{c #386382} {/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                        <Text text="{c #386382}当前操作:{/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                        <Text text="{c #386382}文件总数:{/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                        <Text text="{c #386382}已完成数:{/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                        <Text text="{c #386382}当前文件:{/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                        <Text text="{c #386382}当前操作:{/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+                    </VerticalLayout>
+                </VerticalLayout>
+            </VerticalLayout>
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

@@ -740,14 +740,6 @@
 		<File
 			RelativePath="..\DuiPcMgr\main.cpp"
 			>
-			<FileConfiguration
-				Name="UnicodeDebug|Win32"
-				>
-				<Tool
-					Name="VCCLCompilerTool"
-					UsePrecompiledHeader="2"
-				/>
-			</FileConfiguration>
 		</File>
 		<File
 			RelativePath="..\DuiPcMgr\resource.h"

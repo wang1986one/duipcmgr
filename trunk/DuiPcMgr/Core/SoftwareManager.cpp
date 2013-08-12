@@ -76,7 +76,6 @@ DWORD CSoftwareManager::EnumSoftware()
 					memset(&info.installData,0,sizeof(tm));
 				}else
 				{
-					TRACE(_T("InstallDate：%s\n\n"),info.strInstallDate);
 					int iStart = 0;
 					CString strDate[6];		// 月日年时分秒
 					int i = 0;

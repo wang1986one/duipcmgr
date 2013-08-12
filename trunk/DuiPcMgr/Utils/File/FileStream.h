@@ -32,6 +32,8 @@ namespace Utils
 		virtual void Close();
 		virtual UINT GetLength();
 
+		void Seek(UINT dwSeek);
+
 	protected:
 		HANDLE m_hFile;
 		UINT m_iFileLength;

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="800,446">
+  <VerticalLayout bordercolor="#FF0000FF">
+    <HorizontalLayout height="37" bkimage="file='Common\XX01.png'"  >
+      <Text text="{c #386382} 当前中有{/c}" textcolor="#FF000000" padding="5,8,0,0" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+      <Text text="1024" font="3" textcolor="#FF017D46" padding="0,7,0,0" disabledtextcolor="#FFA7A6AA" showhtml="false" align="wrap" />
+      <Text text="{c #386382}个任务.{/c}"    textcolor="#FF000000" padding="0,8,0,0" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+      <Control />
+      <Button name="refresh" width="23" height="23" padding="0,5,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='Common\refresh.png' source='1,0,24,23' " hotimage="file='Common\refresh.png' source='24,0,47,23' " pushedimage="file='Common\refresh.png' source='47,0,70,23' " />
+    </HorizontalLayout>
+    <HorizontalLayout bordercolor="#00DBEFFD" bordersize="1">
+      <VerticalLayout>
+          <HorizontalLayout bordercolor="#00DBEFFD" bordersize="1">
+            <List name="Softwarelist" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" menu="true" itemtextcolor="#FF000000" itembkcolor="#FFE2DDDF" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" headerbkimage="file='Common\list_header_bg.png'" itemshowhtml="true" vscrollbar="true" hscrollbar="true">
+              <ListHeader height="24" bkimage="file='Common\list_header_bg.png'" menu="true">
+                <ListHeaderItem text="序号"         width="40"     minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
+                <ListHeaderItem text="文件名"       width="100"    minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
+                <ListHeaderItem text="文件位置"     width="220"    minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
+                <ListHeaderItem text="操作"         width="40"     minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
+                <ListHeaderItem text="状态"         width="40"     minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
+              </ListHeader>
+            </List>
+          </HorizontalLayout>
+        <HorizontalLayout height="40" padding="0,0,0,0" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" bordersize="1" >
+          <Text text="{c #386382}输出到(目录):{/c}" padding="0,8,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+          <Edit text="E:\OUT\" textcolor="#FF000000" height="25" padding="0,6,0,0" />
+          <Button name="refresh" width="23" height="23" padding="0,8,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='Common\refresh.png' source='1,0,24,23' " hotimage="file='Common\refresh.png' source='24,0,47,23' " pushedimage="file='Common\refresh.png' source='47,0,70,23' " />
+        </HorizontalLayout>
+      </VerticalLayout>
+      <VerticalLayout name="SidebarLayout"  width="350" padding="0,0,0,0" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" bordersize="1" >
+        <VerticalLayout bordercolor="#00DBEFFD" bordersize="1">
+          <Text text="{c #386382} {/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+          <Text text="{c #386382}当前操作:{/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+          <Text text="{c #386382}文件总数:{/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+          <Text text="{c #386382}已完成数:{/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+          <Text text="{c #386382}当前文件:{/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+          <Text text="{c #386382}当前操作:{/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+        </VerticalLayout>
+        <VerticalLayout>
+          <!--bkimage="file='Common\空地君临时背景.png' corner='135,460,2,2'"-->
+          <Text text="{c #386382} {/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+          <Text text="{c #386382}当前操作:{/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+          <Text text="{c #386382}文件总数:{/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+          <Text text="{c #386382}已完成数:{/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+          <Text text="{c #386382}当前文件:{/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+          <Text text="{c #386382}当前操作:{/c}" textpadding="10,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+        </VerticalLayout>
+      </VerticalLayout>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

@@ -62,7 +62,7 @@ void CMainWnd::InitWindow()
 	CSoftwareManager manager;
 	DWORD count = manager.EnumSoftware();
 	CString strSize;
-	for(int i = 0; i < count; i++)
+	for(UINT i = 0; i < count; i++)
 	{
 		PSoftwareInfo pInfo = (PSoftwareInfo)manager.GetSoftwareInfoAt(i);
 

@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "UI/MainWnd.h"
 
-
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR /*lpCmdLine*/, int nCmdShow)
 {
 	g_logger.InitLogger();
