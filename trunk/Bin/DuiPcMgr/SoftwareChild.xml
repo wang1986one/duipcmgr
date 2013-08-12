@@ -16,10 +16,10 @@
         <HorizontalLayout>
           <List name="Softwarelist" itemlinecolor="#ff000000" itemendellipsis="true" itemtextpadding="6,0,0,3" bkcolor="#FFFFFFFF" bordercolor="#00DBEFFD" menu="true" itemtextcolor="#FF000000" itembkcolor="#FFE2DDDF" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFC1E3FF" itemhottextcolor="#FF000000" itemhotbkcolor="#FFE9F5FF" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" headerbkimage="file='Common\list_header_bg.png'" itemshowhtml="true" vscrollbar="true" hscrollbar="true">
             <ListHeader height="24" bkimage="file='Common\list_header_bg.png'" menu="true">
-              <ListHeaderItem text="软件名称"   width="260"     minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
+              <ListHeaderItem text="软件名称"   width="290"     minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
               <ListHeaderItem text="大小"       width="90"      minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
-              <ListHeaderItem text="安装日期"   width="130"     minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
-              <ListHeaderItem text="使用频率"   width="140"     minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
+              <ListHeaderItem text="安装日期"   width="100"     minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
+              <ListHeaderItem text="使用频率"   width="130"     minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
               <ListHeaderItem text="操作"       width="130"     minwidth="30" sepwidth="1" align="center" hotimage="file='Common\list_header_hot.png'" pushedimage="file='Common\list_header_pushed.png'" sepimage="file='Common\list_header_sep.png'" />
             </ListHeader>
           </List>

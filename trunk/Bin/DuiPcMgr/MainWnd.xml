@@ -5,6 +5,8 @@
   <Font name="微软雅黑" size="12" bold="true" italic="false" />
   <Font name="微软雅黑" size="42" bold="true" italic="false" />
   <Font name="微软雅黑" size="16" bold="true" italic="false" />
+  <Font name="微软雅黑" size="12" bold="false" italic="false" />
+  <Font name="微软雅黑" size="10" bold="true" italic="false" />
   <Include source="scrollbar.xml" />
   <Default name="Button" value="normalimage=&quot;file='Common\TabLayoutbtn.png' corner='2,2,2,2'&quot; hotimage=&quot;file='Common\TabLayoutbtn_h.png'&quot; pushedimage=&quot;file='Common\TabLayoutbtn_p.png'&quot;" />
   <Default name="VScrollBar" value="button1normalimage=&quot;file='Common\scrollbar_v.png' source='0,0,16,16'&quot; button1hotimage=&quot;file='Common\scrollbar_v.png' source='16,0,32,16,16'&quot; button1pushedimage=&quot;file='Common\scrollbar_v.png' source='32,0,48,16'&quot; button2normalimage=&quot;file='Common\scrollbar_v.png' source='0,32,16,48'&quot; button2hotimage=&quot;file='Common\scrollbar_v.png' source='16,32,32,48'&quot; button2pushedimage=&quot;file='Common\scrollbar_v.png' source='32,32,48,48'&quot; thumbnormalimage=&quot;file='Common\scrollbar_v.png' source='0,48,16,64' corner='0,2,0,2'&quot; thumbhotimage=&quot;file='Common\scrollbar_v.png' source='16,48,32,64' corner='0,2,0,2'&quot; thumbpushedimage=&quot;file='Common\scrollbar_v.png' source='32,48,48,64' corner='0,2,0,2'&quot; bknormalimage=&quot;file='Common\scrollbar_v.png' source='0,16,16,32'&quot;" />
