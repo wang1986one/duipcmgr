@@ -150,6 +150,7 @@ namespace Utils
 
 		CString FormatString(LPCTSTR pstrFormat, ... );
 	private:
+		void CleanThread(void);
 		SharedAppenderPtr m_SQLiteAppender;
 
 		SharedAppenderPtr GetAppender();
@@ -159,6 +160,7 @@ namespace Utils
 		CString m_strLogPath;
 		CString m_strPattern;
 		CString m_strDebugPattern;
+		DWORD m_dwMainThreadID;
 	};
 }
 

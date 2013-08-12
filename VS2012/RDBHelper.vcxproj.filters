@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{5AAB665D-9853-4715-A382-023514F8FFD2}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{abcf1211-142f-4a3a-949f-fa41e51373cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{2868020f-878c-4339-806d-271ac8bdf39d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\System">
+      <UniqueIdentifier>{9ec30f75-f33a-4930-ac35-74256b5b5b99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Path">
+      <UniqueIdentifier>{4bb58360-bf8c-48f2-84ff-2d495aee2164}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Network">
+      <UniqueIdentifier>{f65b797d-d455-4ffc-9471-2ba14f31c964}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Thread">
+      <UniqueIdentifier>{519d4801-9550-4671-b160-d913aa8a7602}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\File">
+      <UniqueIdentifier>{5b2beecf-cb48-4ea3-9edd-95844affb90c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Window">
+      <UniqueIdentifier>{78a5fb22-9b37-46f9-bd51-8c7bc31d2a64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Parser">
+      <UniqueIdentifier>{1e9e386c-2d38-488c-81c4-0f0f5e1b2a0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Crypt">
+      <UniqueIdentifier>{b51d0be8-e3db-4aee-8e39-3c8a7b1f7d34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Hash">
+      <UniqueIdentifier>{b948679d-34c4-4e02-a89f-39aac53eb84d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Register">
+      <UniqueIdentifier>{fa52585b-968e-428e-b013-67c57590206c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TinyXML">
+      <UniqueIdentifier>{767ef170-be90-4f45-a7d8-525e1e799004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSON">
+      <UniqueIdentifier>{c59a2efe-8517-4f3b-82ec-3f41675fc083}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQLite">
+      <UniqueIdentifier>{495e81be-dc3b-4601-8f97-ffd1001ef16a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{49169a01-bd91-4851-a89e-54527782e041}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\RDBHelper\Res\RDBHelper.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\RDBHelper\Res\skin.zip">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\RDBHelper\RDBHelper.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\RDBHelper\UI\MainWnd.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\Log4cplus.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\MemBuffer.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\StringUtil.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\Utils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\System\Kernel32Mod.cpp">
+      <Filter>Utils\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\System\NTHelper.cpp">
+      <Filter>Utils\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\System\ProcessMgr.cpp">
+      <Filter>Utils\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\System\SystemInfo.cpp">
+      <Filter>Utils\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\System\Vista.cpp">
+      <Filter>Utils\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\System\WinWow64.cpp">
+      <Filter>Utils\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\Path\WinPath.cpp">
+      <Filter>Utils\Path</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\Thread\ThreadPool.cpp">
+      <Filter>Utils\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\Thread\ThreadUtil.cpp">
+      <Filter>Utils\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\Thread\WinRunnable.cpp">
+      <Filter>Utils\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\Thread\WinThread.cpp">
+      <Filter>Utils\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\File\FileStream.cpp">
+      <Filter>Utils\File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\File\FileUtil.cpp">
+      <Filter>Utils\File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\File\FileVersion.cpp">
+      <Filter>Utils\File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\File\FileVersionInfo.cpp">
+      <Filter>Utils\File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\Window\TrayIcon.cpp">
+      <Filter>Utils\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\Crypt\TEACrypt.cpp">
+      <Filter>Utils\Crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\Hash\crc32.c">
+      <Filter>Utils\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\Hash\MD5.cpp">
+      <Filter>Utils\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\Register\RegistryKey.cpp">
+      <Filter>Utils\Register</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\TinyXml\tinystr.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\TinyXml\tinyxml.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\TinyXml\tinyxmlerror.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\TinyXml\tinyxmlparser.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\JSON\json_reader.cpp">
+      <Filter>JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\JSON\json_value.cpp">
+      <Filter>JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\JSON\json_writer.cpp">
+      <Filter>JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\SQLite\CppSQLite3U.cpp">
+      <Filter>SQLite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\SQLite\sqlite3.c">
+      <Filter>SQLite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Core\RdbFile.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\main.cpp" />
+    <ClCompile Include="..\RDBHelper\stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\RDBHelper\UI\MainWnd.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\Delegate.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\DelegateTemplate.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\Log4cplus.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\MemBuffer.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\StringUtil.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\Utils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\System\Kernel32Mod.h">
+      <Filter>Utils\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\System\NTHelper.h">
+      <Filter>Utils\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\System\ProcessMgr.h">
+      <Filter>Utils\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\System\SystemInfo.h">
+      <Filter>Utils\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\System\Vista.h">
+      <Filter>Utils\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\System\WinModule.h">
+      <Filter>Utils\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\System\WinWow64.h">
+      <Filter>Utils\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\Path\WinPath.h">
+      <Filter>Utils\Path</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\Network\WinHttpDef.h">
+      <Filter>Utils\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\Thread\ThreadPool.h">
+      <Filter>Utils\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\Thread\ThreadUtil.h">
+      <Filter>Utils\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\Thread\WinRunnable.h">
+      <Filter>Utils\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\Thread\WinThread.h">
+      <Filter>Utils\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\File\FileStream.h">
+      <Filter>Utils\File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\File\FileUtil.h">
+      <Filter>Utils\File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\File\FileVersion.h">
+      <Filter>Utils\File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\File\FileVersionInfo.h">
+      <Filter>Utils\File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\Window\TrayIcon.h">
+      <Filter>Utils\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\Crypt\TEACrypt.h">
+      <Filter>Utils\Crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\Hash\crc32.h">
+      <Filter>Utils\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\Hash\MD5.h">
+      <Filter>Utils\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\Register\RegistryKey.h">
+      <Filter>Utils\Register</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Utils\Register\RegKeyConvertString.h">
+      <Filter>Utils\Register</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\TinyXml\tinystr.h">
+      <Filter>TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\TinyXml\tinyxml.h">
+      <Filter>TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\JSON\autolink.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\JSON\config.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\JSON\features.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\JSON\forwards.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\JSON\json.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\JSON\json_batchallocator.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\JSON\reader.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\JSON\value.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\JSON\writer.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\SQLite\CppSQLite3U.h">
+      <Filter>SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\SQLite\sqlite3.h">
+      <Filter>SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\SQLite\sqlite3ext.h">
+      <Filter>SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\Core\RdbFile.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RDBHelper\resource.h" />
+    <ClInclude Include="..\RDBHelper\stdafx.h" />
+  </ItemGroup>
+</Project>

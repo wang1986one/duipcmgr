@@ -9,6 +9,7 @@
 #define MAX_LOG_SIZE 8192
 
 Utils::CLogger::CLogger()
+	: m_dwMainThreadID(0)
 {
 	log4cplus::initialize();
 #ifdef _DEBUG
@@ -26,17 +27,19 @@ Utils::CLogger::CLogger()
 
 Utils::CLogger::~CLogger()
 {
-
+	log4cplus::threadCleanup();
 }
 
 void Utils::CLogger::InitLogger( )
 {
+	log4cplus::initialize();
 #ifdef _UNICODE
 	std::locale::global(std::locale("chs"));
 #endif
 
+	m_dwMainThreadID =::GetCurrentThreadId();
 	// 获取RootLogger并设置，子Logger自动继承
-	log4cplus::Logger& rootLogger = log4cplus::Logger::getRoot();
+	log4cplus::Logger rootLogger = log4cplus::Logger::getRoot();
 	rootLogger.addAppender(GetAppender());
 
 #ifdef _DEBUG		// 调试版全部输出到控制台
@@ -76,7 +79,7 @@ void Utils::CLogger::LogBy( LogLevel level,LPCTSTR lpInstance,LPCTSTR pstrFormat
 		va_end(args);
 		logger.forcedLog(level, strTemp.GetString());
 	}
-	log4cplus::threadCleanup();
+	CleanThread();
 }
 
 void Utils::CLogger::Log( LogLevel level, LPCTSTR pstrFormat, ... )
@@ -93,7 +96,7 @@ void Utils::CLogger::Log( LogLevel level, LPCTSTR pstrFormat, ... )
 		va_end(args);
 		rootLogger.forcedLog(level, strTemp.GetString());
 	}
-	log4cplus::threadCleanup();
+	CleanThread();
 }
 
 void Utils::CLogger::Debug( LPCTSTR pstrFormat, ... )
@@ -110,12 +113,12 @@ void Utils::CLogger::Debug( LPCTSTR pstrFormat, ... )
 		va_end(args);
 		rootLogger.forcedLog(DEBUG_LOG_LEVEL, strTemp.GetString());
 	}
-	log4cplus::threadCleanup();
+	CleanThread();
 }
 
 void Utils::CLogger::Info( LPCTSTR pstrFormat, ... )
 {
-	log4cplus::Logger& rootLogger = log4cplus::Logger::getRoot();
+	log4cplus::Logger rootLogger = log4cplus::Logger::getRoot();
 	if ( rootLogger.isEnabledFor(INFO_LOG_LEVEL))
 	{
 		int nSize = 0;
@@ -127,12 +130,12 @@ void Utils::CLogger::Info( LPCTSTR pstrFormat, ... )
 		va_end(args);
 		rootLogger.forcedLog(INFO_LOG_LEVEL, strTemp.GetString());
 	}
-	log4cplus::threadCleanup();
+	CleanThread();
 }
 
 void Utils::CLogger::Warn( LPCTSTR pstrFormat, ... )
 {
-	log4cplus::Logger& rootLogger = log4cplus::Logger::getRoot();
+	log4cplus::Logger rootLogger = log4cplus::Logger::getRoot();
 	if ( rootLogger.isEnabledFor(WARN_LOG_LEVEL))
 	{
 		int nSize = 0;
@@ -144,12 +147,12 @@ void Utils::CLogger::Warn( LPCTSTR pstrFormat, ... )
 		va_end(args);
 		rootLogger.forcedLog(WARN_LOG_LEVEL, strTemp.GetString());
 	}
-	log4cplus::threadCleanup();
+	CleanThread();
 }
 
 void Utils::CLogger::Error( LPCTSTR pstrFormat, ... )
 {
-	log4cplus::Logger& rootLogger = log4cplus::Logger::getRoot();
+	log4cplus::Logger rootLogger = log4cplus::Logger::getRoot();
 	if ( rootLogger.isEnabledFor(ERROR_LOG_LEVEL))
 	{
 		int nSize = 0;
@@ -161,12 +164,12 @@ void Utils::CLogger::Error( LPCTSTR pstrFormat, ... )
 		va_end(args);
 		rootLogger.forcedLog(ERROR_LOG_LEVEL, strTemp.GetString());
 	}
-	log4cplus::threadCleanup();
+	CleanThread();
 }
 
 void Utils::CLogger::Fatal( LPCTSTR pstrFormat, ... )
 {
-	log4cplus::Logger& rootLogger = log4cplus::Logger::getRoot();
+	log4cplus::Logger rootLogger = log4cplus::Logger::getRoot();
 	if ( rootLogger.isEnabledFor(FATAL_LOG_LEVEL))
 	{
 		int nSize = 0;
@@ -178,12 +181,12 @@ void Utils::CLogger::Fatal( LPCTSTR pstrFormat, ... )
 		va_end(args);
 		rootLogger.forcedLog(FATAL_LOG_LEVEL, strTemp.GetString());
 	}
-	log4cplus::threadCleanup();
+	CleanThread();
 }
 
 void Utils::CLogger::DebugBy( LPCTSTR lpInstance,LPCTSTR pstrFormat, ... )
 {
-	log4cplus::Logger& logger = log4cplus::Logger::getInstance(lpInstance);
+	log4cplus::Logger logger = log4cplus::Logger::getInstance(lpInstance);
 	if ( logger.isEnabledFor(DEBUG_LOG_LEVEL))
 	{
 		int nSize = 0;
@@ -195,12 +198,12 @@ void Utils::CLogger::DebugBy( LPCTSTR lpInstance,LPCTSTR pstrFormat, ... )
 		va_end(args);
 		logger.forcedLog(DEBUG_LOG_LEVEL, strTemp.GetString());
 	}
-	log4cplus::threadCleanup();
+	CleanThread();
 }
 
 void Utils::CLogger::InfoBy( LPCTSTR lpInstance,LPCTSTR pstrFormat, ... )
 {
-	log4cplus::Logger& logger = log4cplus::Logger::getInstance(lpInstance);
+	log4cplus::Logger logger = log4cplus::Logger::getInstance(lpInstance);
 	if ( logger.isEnabledFor(ERROR_LOG_LEVEL))
 	{
 		int nSize = 0;
@@ -212,12 +215,12 @@ void Utils::CLogger::InfoBy( LPCTSTR lpInstance,LPCTSTR pstrFormat, ... )
 		va_end(args);
 		logger.forcedLog(INFO_LOG_LEVEL, strTemp.GetString());
 	}
-	log4cplus::threadCleanup();
+	CleanThread();
 }
 
 void Utils::CLogger::WarnBy( LPCTSTR lpInstance,LPCTSTR pstrFormat, ... )
 {
-	log4cplus::Logger& logger = log4cplus::Logger::getInstance(lpInstance);
+	log4cplus::Logger logger = log4cplus::Logger::getInstance(lpInstance);
 	if ( logger.isEnabledFor(ERROR_LOG_LEVEL))
 	{
 		int nSize = 0;
@@ -229,12 +232,12 @@ void Utils::CLogger::WarnBy( LPCTSTR lpInstance,LPCTSTR pstrFormat, ... )
 		va_end(args);
 		logger.forcedLog(WARN_LOG_LEVEL, strTemp.GetString());
 	}
-	log4cplus::threadCleanup();
+	CleanThread();
 }
 
 void Utils::CLogger::ErrorBy( LPCTSTR lpInstance,LPCTSTR pstrFormat, ... )
 {
-	log4cplus::Logger& logger = log4cplus::Logger::getInstance(lpInstance);
+	log4cplus::Logger logger = log4cplus::Logger::getInstance(lpInstance);
 	if ( logger.isEnabledFor(ERROR_LOG_LEVEL))
 	{
 		int nSize = 0;
@@ -246,12 +249,12 @@ void Utils::CLogger::ErrorBy( LPCTSTR lpInstance,LPCTSTR pstrFormat, ... )
 		va_end(args);
 		logger.forcedLog(ERROR_LOG_LEVEL, strTemp.GetString());
 	}
-	log4cplus::threadCleanup();
+	CleanThread();
 }
 
 void Utils::CLogger::FatalBy( LPCTSTR lpInstance,LPCTSTR pstrFormat, ... )
 {
-	log4cplus::Logger& logger = log4cplus::Logger::getInstance(lpInstance);
+	log4cplus::Logger logger = log4cplus::Logger::getInstance(lpInstance);
 	if ( logger.isEnabledFor(FATAL_LOG_LEVEL))
 	{
 		int nSize = 0;
@@ -263,7 +266,7 @@ void Utils::CLogger::FatalBy( LPCTSTR lpInstance,LPCTSTR pstrFormat, ... )
 		va_end(args);
 		logger.forcedLog(FATAL_LOG_LEVEL, strTemp.GetString());
 	}
-	log4cplus::threadCleanup();
+	CleanThread();
 }
 
 void Utils::CLogger::SetLogLevel( LogLevel ll )
@@ -311,7 +314,7 @@ CString& Utils::CLogger::GetDebugPatternString()
 void Utils::CLogger::SetInstanceFilter( VString& filterList )
 {
 	// 删除Root的Appender，等于不输出任何信息
-	log4cplus::Logger& rootLogger = log4cplus::Logger::getRoot();
+	log4cplus::Logger rootLogger = log4cplus::Logger::getRoot();
 	rootLogger.removeAllAppenders();
 
 	// 设置要求输出的Instance
@@ -367,5 +370,11 @@ void Utils::CLogger::AddInstanceFilter( LPCTSTR lpszNewFilter )
 void Utils::CLogger::UpdateInstanceFilter()
 {
 	SetInstanceFilter(m_InstanceFilterList);
+}
+
+void Utils::CLogger::CleanThread( void )
+{
+	if ( m_dwMainThreadID != ::GetCurrentThreadId())
+		log4cplus::threadCleanup();
 }
 

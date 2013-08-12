@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="UnicodeDebug|Win32">
+      <Configuration>UnicodeDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnicodeRelease|Win32">
+      <Configuration>UnicodeRelease</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4300798E-60D7-4C77-AE4E-52C0A92FD9CB}</ProjectGuid>
+    <RootNamespace>RDBHelper</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <UseOfAtl>false</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <UseOfAtl>false</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+    <OutDir>$(ProjectDir)..\Bin\</OutDir>
+    <IntDir>$(SolutionDir)$(ProjectName)\Build\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+    <OutDir>$(ProjectDir)..\Bin\</OutDir>
+    <IntDir>$(SolutionDir)$(ProjectName)\Build\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\$(ProjectName)\;$(SolutionDir)..\log4cplus\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_RAND_S;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName)_d.exe</OutputFile>
+      <AdditionalLibraryDirectories>Lib;$(SolutionDir)..\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\$(ProjectName)\;$(SolutionDir)..\log4cplus\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;UILIB_STATIC;_CRT_RAND_S;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>Lib;$(SolutionDir)..\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\RDBHelper\Res\RDBHelper.ico" />
+    <None Include="..\RDBHelper\Res\skin.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\RDBHelper\RDBHelper.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\RDBHelper\UI\MainWnd.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\Log4cplus.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\MemBuffer.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\StringUtil.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\Utils.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\System\Kernel32Mod.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\System\NTHelper.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\System\ProcessMgr.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\System\SystemInfo.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\System\Vista.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\System\WinWow64.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\Path\WinPath.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\Thread\ThreadPool.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\Thread\ThreadUtil.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\Thread\WinRunnable.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\Thread\WinThread.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\File\FileStream.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\File\FileUtil.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\File\FileVersion.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\File\FileVersionInfo.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\Window\TrayIcon.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\Crypt\TEACrypt.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\Hash\crc32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Utils\Hash\MD5.cpp" />
+    <ClCompile Include="..\RDBHelper\Utils\Register\RegistryKey.cpp" />
+    <ClCompile Include="..\RDBHelper\TinyXml\tinystr.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\TinyXml\tinyxml.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\TinyXml\tinyxmlerror.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\TinyXml\tinyxmlparser.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\JSON\json_reader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\JSON\json_value.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\JSON\json_writer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\SQLite\CppSQLite3U.cpp" />
+    <ClCompile Include="..\RDBHelper\SQLite\sqlite3.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\RDBHelper\Core\RdbFile.cpp" />
+    <ClCompile Include="..\RDBHelper\main.cpp" />
+    <ClCompile Include="..\RDBHelper\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\RDBHelper\UI\MainWnd.h" />
+    <ClInclude Include="..\RDBHelper\Utils\Delegate.h" />
+    <ClInclude Include="..\RDBHelper\Utils\DelegateTemplate.h" />
+    <ClInclude Include="..\RDBHelper\Utils\Log4cplus.h" />
+    <ClInclude Include="..\RDBHelper\Utils\MemBuffer.h" />
+    <ClInclude Include="..\RDBHelper\Utils\StringUtil.h" />
+    <ClInclude Include="..\RDBHelper\Utils\Utils.h" />
+    <ClInclude Include="..\RDBHelper\Utils\System\Kernel32Mod.h" />
+    <ClInclude Include="..\RDBHelper\Utils\System\NTHelper.h" />
+    <ClInclude Include="..\RDBHelper\Utils\System\ProcessMgr.h" />
+    <ClInclude Include="..\RDBHelper\Utils\System\SystemInfo.h" />
+    <ClInclude Include="..\RDBHelper\Utils\System\Vista.h" />
+    <ClInclude Include="..\RDBHelper\Utils\System\WinModule.h" />
+    <ClInclude Include="..\RDBHelper\Utils\System\WinWow64.h" />
+    <ClInclude Include="..\RDBHelper\Utils\Path\WinPath.h" />
+    <ClInclude Include="..\RDBHelper\Utils\Network\WinHttpDef.h" />
+    <ClInclude Include="..\RDBHelper\Utils\Thread\ThreadPool.h" />
+    <ClInclude Include="..\RDBHelper\Utils\Thread\ThreadUtil.h" />
+    <ClInclude Include="..\RDBHelper\Utils\Thread\WinRunnable.h" />
+    <ClInclude Include="..\RDBHelper\Utils\Thread\WinThread.h" />
+    <ClInclude Include="..\RDBHelper\Utils\File\FileStream.h" />
+    <ClInclude Include="..\RDBHelper\Utils\File\FileUtil.h" />
+    <ClInclude Include="..\RDBHelper\Utils\File\FileVersion.h" />
+    <ClInclude Include="..\RDBHelper\Utils\File\FileVersionInfo.h" />
+    <ClInclude Include="..\RDBHelper\Utils\Window\TrayIcon.h" />
+    <ClInclude Include="..\RDBHelper\Utils\Crypt\TEACrypt.h" />
+    <ClInclude Include="..\RDBHelper\Utils\Hash\crc32.h" />
+    <ClInclude Include="..\RDBHelper\Utils\Hash\MD5.h" />
+    <ClInclude Include="..\RDBHelper\Utils\Register\RegistryKey.h" />
+    <ClInclude Include="..\RDBHelper\Utils\Register\RegKeyConvertString.h" />
+    <ClInclude Include="..\RDBHelper\TinyXml\tinystr.h" />
+    <ClInclude Include="..\RDBHelper\TinyXml\tinyxml.h" />
+    <ClInclude Include="..\RDBHelper\JSON\autolink.h" />
+    <ClInclude Include="..\RDBHelper\JSON\config.h" />
+    <ClInclude Include="..\RDBHelper\JSON\features.h" />
+    <ClInclude Include="..\RDBHelper\JSON\forwards.h" />
+    <ClInclude Include="..\RDBHelper\JSON\json.h" />
+    <ClInclude Include="..\RDBHelper\JSON\json_batchallocator.h" />
+    <ClInclude Include="..\RDBHelper\JSON\reader.h" />
+    <ClInclude Include="..\RDBHelper\JSON\value.h" />
+    <ClInclude Include="..\RDBHelper\JSON\writer.h" />
+    <ClInclude Include="..\RDBHelper\SQLite\CppSQLite3U.h" />
+    <ClInclude Include="..\RDBHelper\SQLite\sqlite3.h" />
+    <ClInclude Include="..\RDBHelper\SQLite\sqlite3ext.h" />
+    <ClInclude Include="..\RDBHelper\Core\RdbFile.h" />
+    <ClInclude Include="..\RDBHelper\resource.h" />
+    <ClInclude Include="..\RDBHelper\stdafx.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

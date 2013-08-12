@@ -126,6 +126,14 @@ namespace Utils
 		return (UINT)ll.QuadPart;
 	}
 
+	void CFileInStream::Seek( UINT dwSeek )
+	{
+		if(!m_hFile)
+			return;
+
+		::SetFilePointer(m_hFile,dwSeek,0,FILE_BEGIN);
+	}
+
 	BOOL IDataStream::Create()
 	{
 		return FALSE;
