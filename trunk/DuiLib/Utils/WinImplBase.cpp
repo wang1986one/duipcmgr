@@ -169,6 +169,7 @@ namespace DuiLib
 
 	LRESULT WindowImplBase::OnSysCommand( UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled )
 	{
+		bHandled = FALSE;
 		return 0;
 	}
 
