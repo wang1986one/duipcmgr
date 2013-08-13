@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <Window size="850,70">
-  <ListContainerElement height="70" bordercolor="#FFFFFFFF">
+  <ListContainerElement height="70" bkcolor="#FF000000">
     <HorizontalLayout>
       <Control name="SoftwareICON" width="48" height="48" padding="5,10,10,10" bkimage="file='Common\TemporaryListElementbk.png'"/>
-      
+
       <!--<HorizontalLayout width="290">
         <VerticalLayout inset="10,15,0,0" >
           <Text text="DuiPCManager 1.0" font="3" textcolor="#FF383838" endellipsis="true"/>
@@ -11,16 +11,15 @@
         </VerticalLayout>
       </HorizontalLayout>-->
 
-      <HorizontalLayout width="290" inset="10,0,0,0" bordercolor="#FF000000" bordersize="2" >
-          <VerticalLayout>
-            <Control />
-            <Text text="DuiPCManager 1.0" font="3" textcolor="#FF383838" endellipsis="true"/>
-            <Text text="出品公司:量子物理空间传输技术研..." font="4" textcolor="#FF7A7A7A" endellipsis="true" />
-            <Control />
-          </VerticalLayout>
+      <HorizontalLayout width="290" inset="10,0,0,0" bordercolor="#FF000000" bordersize="0" >
+        <VerticalLayout>
+          <Control />
+          <Text text="DuiPCManager 1.0" font="3" textcolor="#FF383838" endellipsis="true"/>
+          <Text text="出品公司:量子物理空间传输技术研..." font="4" textcolor="#FF7A7A7A" endellipsis="true" />
+          <Control />
+        </VerticalLayout>
       </HorizontalLayout>
-      
-      
+
       <HorizontalLayout width="90">
         <VerticalLayout >
           <Control />
